@@ -7,6 +7,8 @@ import org.openqa.selenium.support.Color;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.Random;
+
 public class Guest_permission_page {
     public WebDriver driver;
 
@@ -43,20 +45,27 @@ public class Guest_permission_page {
         String[] st={"#0000ff","#008000","#FF7043"};
         String[] st1={"Read","Write","Admin"};
         int[] count ={1,2,3};
-        for(int i=0;i<3;i++) {
+        Random random = new Random();
+        int a =random.nextInt(3);
+        System.out.println(a);
+        driver.findElement(By.xpath("(//*[@type=\"checkbox\"])["+(a+1)+"]")).click();
+
+
+        /*for(int i=0;i<3;i++) {
             Thread.sleep(5000);
 
-            this.setSubmit_button(st[i],count[i],st1[i]);
-        }
+        }*/
     }
 
-    public void setSubmit_button(String hexcolor,int count,String access) throws InterruptedException {
+
+
+   /* public void setSubmit_button(String hexcolor,int count,String access) throws InterruptedException {
         for(int i=1;i<=8;i++)
         {
             driver.findElement(By.xpath("(//*[ @type=\"checkbox\" ])["+count+"]")).click();
             count =count++;
         }
 
-    }
+    }*/
 }
 
