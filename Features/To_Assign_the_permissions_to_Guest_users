@@ -1,0 +1,15 @@
+Feature: To Assign the Permissions to Guest Users
+  Scenario: To Assign Selected Staff a permissions
+    Given I launch chrome browser
+    When I open Url "https://www.syncoffice.com/module-test-dashboard/dashboard"
+    Then I Click on login button
+    And I enter UserName "sarika.mishra@candytechnologies.in" And Password "123456"
+    And I Click on Login
+    And Click on masters
+    And Mouse over on module list
+    And click on Guest_user Module
+    Then Click on  Guest User Permission
+    Then Select the Guest User
+    Then Select the Permission options
+    Then Click on Submit
+

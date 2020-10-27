@@ -1,0 +1,16 @@
+Feature: To Assign the employee to the Company -Location - Department
+  Scenario: To Assign Selected Employees to the Company
+    Given I launch chrome browser
+    When I open Url "https://www.syncoffice.com/module-test-dashboard/dashboard"
+    Then I Click on login button
+    And I enter UserName "sarika.mishra@candytechnologies.in" And Password "123456"
+    And I Click on Login
+    And Click on masters
+    And Mouse over on module list
+    Then Click on Roles and Permissions tab
+    And Click on Employee to Company
+    When  Select Employee Company,Departments
+    Then Click On Submit To Assign the Selected Company
+
+
+

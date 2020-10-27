@@ -1,0 +1,17 @@
+Feature: To_Assign_Client_staff_to_Clientstaff
+  Scenario: To Assign Selected Staff to Clients
+    Given I launch chrome browser
+    When I open Url "https://www.syncoffice.com/module-test-dashboard/dashboard"
+    Then I Click on login button
+    And I enter UserName "sarika.mishra@candytechnologies.in" And Password "123456"
+    And I Click on Login
+    And Click on masters
+    And Mouse over on module list
+    Then Click on Roles and Permissions tab
+    And Click on Staff to Client
+    When Select Client from the list
+    Then Select Staff to Assign
+    Then Select Locations of Selected Client
+
+
+
