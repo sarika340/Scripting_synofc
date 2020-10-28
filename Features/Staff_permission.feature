@@ -1,5 +1,5 @@
-Feature: To Assign Guest User to Client
-  Scenario: To Assign guest user to client
+Feature: To Assign the Staff permission
+  Scenario: To Assign Selected Staff a permissions
     Given I launch chrome browser
     When I open Url "https://www.syncoffice.com/module-test-dashboard/dashboard"
     Then I Click on login button
@@ -7,9 +7,9 @@ Feature: To Assign Guest User to Client
     And I Click on Login
     And Click on masters
     And Mouse over on module list
-    And click on Guest_user Module
-    Then Click on Assign Guest User submodule
-    Then Select the Guest User field
-    Then Client, Location(s), Department(s)
-    Then click on Submit_button to Assign the CGuest Users to Client
+    Then Click on Roles and Permissions tab
+    Then Click on Client Name to give Permissions
+    Then Select the type of permissions
+    Then Click on Submit Button
+
 

@@ -12,6 +12,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
+
 import java.util.concurrent.TimeUnit;
 
 public class Master_stepdefinition  extends Base_Class {
@@ -23,6 +25,7 @@ public Employee_to_company_page emp;
     public Employee_permission Roles;
 public Guest_permission_page pages;
 public Assign_Guest_user_page  Assign_Guest;
+public Client_to_staff staff;
 
 
 
@@ -39,6 +42,7 @@ public Assign_Guest_user_page  Assign_Guest;
             pages=new Guest_permission_page(driver);
             emp=new Employee_to_company_page(driver);
             Roles=new Employee_permission(driver);
+            staff=new Client_to_staff(driver);
                 Assign_Guest=new Assign_Guest_user_page(driver);
             System.out.println("launch google page");
             Thread.sleep(2000);
@@ -285,20 +289,121 @@ public Assign_Guest_user_page  Assign_Guest;
     @Then("Click on Assign Guest User submodule")
     public void click_on_Assign_Guest_User_submodule() throws InterruptedException {
                 Thread.sleep(3000);
-    Assign_Guest.setGuest_to_client();
+
+        Assign_Guest.setAssign_user();
     }
 
-    @Then("Client\\(s) - Location\\(s) - Department\\(s)")
-    public void client_s_Location_s_Department_s() {
-    Assign_Guest.setAssign_user();
+
+    @Then("Select the Guest User field")
+    public void select_the_Guest_User_field() {
+System.out.println("guest user");
     }
 
-    @Then("click on Submit to Assign the CGuest Users to Client")
-    public void click_on_Submit_to_Assign_the_CGuest_Users_to_Client() throws InterruptedException {
+    @Then("Client, Location\\(s), Department\\(s)")
+    public void client_Location_s_Department_s() throws InterruptedException {
+                Thread.sleep(3000);
+                Assign_Guest.setSearch_Guest();
+                System.out.println("Click on search button");
+        Assign_Guest.setSingle_guest();
+        System.out.println("Select the  Guest ");
+
+        Assign_Guest.setSingle_client();
+        System.out.println("Select the Client ");
+
+        Assign_Guest.setSubmit();
+        System.out.println("Client on submit button ");
+
         Thread.sleep(3000);
 
-        Assign_Guest.radio_btn();
+        Assign_Guest.setAll_guest();
+        System.out.println("Select the All Guest ");
 
+        Thread.sleep(3000);
+        Assign_Guest.setAll_client();
+        System.out.println("Select the All Client ");
+        Thread.sleep(3000);
+
+    }
+    @Then("click on Submit_button to Assign the CGuest Users to Client")
+    public void click_on_Submit_button_to_Assign_the_CGuest_Users_to_Client() throws InterruptedException {
+       Assign_Guest.setSubmit();
+        System.out.println("Click on submit button ");
+
+    }
+
+
+
+
+
+    @Then("Click on Staff to Client")
+    public void click_on_Staff_to_Client() throws InterruptedException {
+                Thread.sleep(5000);
+        staff.setStaff_to_client();
+       // driver.findElement(By.xpath("//span[contains(text(),'Staff to Client')]")).click();
+        Thread.sleep(5000);
+
+      //  WebElement menuOption1 = driver.findElement(By.xpath("// select[@class=\"mdc-select__native-control customFieldText py-0\" ]"));
+      //Select sc=new Select(menuOption1);
+    //  menuOption1.click();
+        driver.findElement(By.xpath("//*[text()=\"IBM\"]\n")).click();
+
+
+    }
+
+    @When("Select Client from the list")
+    public void select_Client_from_the_list() throws InterruptedException {
+      // driver.findElement(By.xpath("//*[text()=\"IBM\"]\n")).click();
+        staff.setDrop_down();
+        System.out.println("aaaa");
+        Thread.sleep(2000);
+    }
+
+    @Then("Select Staff to Assign")
+    public void select_Staff_to_Assign() throws InterruptedException {
+      // driver.findElement(By.xpath("//*[@type=\"checkbox\"]")).click();
+       staff.setAll_staff();
+        Thread.sleep(2000);
+
+
+    }
+
+    @Then("Select Locations of Selected Client")
+    public void select_Locations_of_Selected_Client() throws InterruptedException {
+       // driver.findElement(By.xpath("( //*[@type=\"checkbox\"])[4]")).click();
+        Thread.sleep(2000);
+       staff.setAll_client();
+
+
+
+
+
+        //driver.findElement(By.xpath("//*[text()=\"Submit\"]")).click();
+
+    }
+
+
+
+
+
+
+
+
+    @Then("Click on Client Name to give Permissions")
+    public void click_on_Client_Name_to_give_Permissions() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new cucumber.api.PendingException();
+    }
+
+    @Then("Select the type of permissions")
+    public void select_the_type_of_permissions() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new cucumber.api.PendingException();
+    }
+
+    @Then("Click on Submit Button")
+    public void click_on_Submit_Button() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new cucumber.api.PendingException();
     }
 
 

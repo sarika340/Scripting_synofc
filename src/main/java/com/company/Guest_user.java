@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 public class
@@ -42,11 +43,11 @@ Guest_user {
        driver.findElement(By.xpath("(//*[text()=\"Guest User\"])[1]")).click();
         Thread.sleep(2000);
 
-     //   driver.findElement(By.xpath("(//*[text()=\"Guest User\"])[2]")).click();
+       driver.findElement(By.xpath("//*[text()=\"Assign Guest User\"]")).click();
         Thread.sleep(2000);
 
-     //   WebElement closeMenuOption = driver.findElement(By.xpath("(//*[text()=\"Guest User\"])[3]"));
-       // actions.moveToElement(closeMenuOption).perform();
+        WebElement closeMenuOption = driver.findElement(By.xpath("//h6[contains(text(),'Guest To Client')]"));
+        actions.moveToElement(closeMenuOption).perform();
         Thread.sleep(2000);
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         System.out.println("Mouse hover on 'Register' from Menu");
@@ -58,6 +59,9 @@ Guest_user {
 
       //  driver.findElement(By.xpath("(//*[@focusable=\"false\"])[11]")).click();
         Thread.sleep(2000);
+        Random random = new Random();
+        int a = random.nextInt(3);
+        System.out.println(a);
 
         driver.findElement(By.xpath("")).click();
         driver.findElement(By.xpath("")).click();

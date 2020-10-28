@@ -24,26 +24,54 @@ public class Assign_Guest_user_page {
     WebElement Assign_user ;
     @FindBy(xpath = "//h6[contains(text(),'Guest To Client')]")
     WebElement Guest_to_client ;
-    @FindBy(xpath = "//body/div[@id='root']/div[1]/div[1]/div[3]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]")
-    WebElement radio_btn ;
+    @FindBy(xpath = "(//*[@type=\"checkbox\"])[1]")
+    WebElement all_guest ;
+    @FindBy(xpath = "(//*[@type=\"checkbox\"])[4]")
+    WebElement all_client ;
+    @FindBy(xpath = "//*[text()=\"Submit\"]")
+    WebElement submit ;
+    @FindBy(xpath = "(//*[@type=\"text\"])[1]")
+    WebElement Search_Guest;
+    @FindBy(xpath = "(//*[@type=\"checkbox\"])[2]")
+    WebElement single_guest ;
+    @FindBy(xpath = "(//*[@type=\"checkbox\"])[5]")
+    WebElement single_client ;
 
     public void setAssign_user() {
         Assign_user.click();
     }
 
     public void setGuest_to_client() {
-        Guest_to_client.getText();
-        Assert.assertEquals("Guest To Client" ,Guest_to_client.getText());
-        System.out.println("text");
+
+        setGuest_to_client();
     }
 
+    public void setSearch_Guest() {
 
-    public boolean radio_btn ()
-    {
-        Random rnd = new Random();
-        List<WebElement> radios = driver.findElements(By.xpath("//body/div[@id='root']/div[1]/div[1]/div[3]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]"));
-        radios.get(rnd.nextInt(radios.size())).click();
-        return true;
+        Search_Guest.sendKeys("gopal");
     }
 
+    public void setSingle_guest() { single_guest.click();
+    }
+
+    public void setSingle_client() {
+        single_client.click();
+        submit.click();
+
+    }
+
+    public void setAll_guest() {
+        all_guest.click();
+    }
+
+    public void setAll_client() {
+        all_client.click();
+    }
+
+    public void setSubmit() throws InterruptedException {
+        submit.click();
+
+
+
+    }
 }

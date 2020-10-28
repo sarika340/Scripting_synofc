@@ -101,11 +101,9 @@ public class Employee_permission {
                 break;
             }
         }
-
         if (size==8){
             System.out.println("All the Button highlightes ad "+access);
         }
-
     }
 
 }
