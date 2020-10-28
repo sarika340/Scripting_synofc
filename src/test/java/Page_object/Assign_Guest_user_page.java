@@ -53,7 +53,6 @@ public class Assign_Guest_user_page {
 
     public void setSingle_guest() { single_guest.click();
     }
-
     public void setSingle_client() {
         single_client.click();
         submit.click();
