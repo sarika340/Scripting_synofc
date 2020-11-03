@@ -28,9 +28,6 @@ public class Guest_permission_page {
     WebElement submit_button_emp;
     @FindBy(xpath = "")
     WebElement q;
-    @FindBy(xpath = "")
-    WebElement f;
-
     public void setGuest_User_Permission() {
         Guest_User_Permission.click();
     }
@@ -40,6 +37,7 @@ public class Guest_permission_page {
     }
 
     public void setGuest() throws InterruptedException {
+        boolean result =false;
 
         Guest.click();
         Random random = new Random();
@@ -56,5 +54,6 @@ public class Guest_permission_page {
             System.out.println("Admin selected successfully");
         }
     }
+
 }
 

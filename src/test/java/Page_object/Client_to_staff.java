@@ -38,17 +38,35 @@ public class Client_to_staff {
         WebElement menuOption1 = driver.findElement(By.xpath("// select[@class=\"mdc-select__native-control customFieldText py-0\" ]"));
         Select sc=new Select(menuOption1);
         menuOption1.click();
+        //sc.deselectByVisibleText("IBM");
+        Thread.sleep(5000);
         driver.findElement(By.xpath("//*[text()=\"IBM\"]\n")).click();
-        Thread.sleep(2000);
+       Thread.sleep(5000);
     }
 
 
 
-    public void setAll_client() {
-all_stafft.click();    }
+    public void setAll_client() throws InterruptedException {
+        all_stafft.click();
+        Thread.sleep(5000);
 
-    public void setAll_staff() {
         all_client.click();
+        Thread.sleep(5000);
+
+           }
+
+    public void setAll_staff() throws InterruptedException {
         submit.click();
+        Thread.sleep(5000);
+
+      //  driver.findElement(By.xpath("(//*[@type=\"checkbox\"])[2]")) .click();
+       // Thread.sleep(5000);
+      //  System.out.println("checkbox");
+
+      //  driver.findElement(By.xpath("(//*[@type=\"checkbox\"])[5]")) .click();
+     //   System.out.println("checkbox");
+
+     //   submit.click();
+
     }
 }

@@ -1,15 +1,9 @@
 package Page_object;
 
-import Utilities.Base_Class;
-import org.junit.Assert;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
-import java.util.List;
-import java.util.Random;
 
 public class Assign_Guest_user_page {
 
@@ -34,7 +28,7 @@ public class Assign_Guest_user_page {
     WebElement Search_Guest;
     @FindBy(xpath = "(//*[@type=\"checkbox\"])[2]")
     WebElement single_guest ;
-    @FindBy(xpath = "(//*[@type=\"checkbox\"])[5]")
+    @FindBy(xpath = "(//*[@type=\"checkbox\"])[4]")
     WebElement single_client ;
 
     public void setAssign_user() {
@@ -44,11 +38,14 @@ public class Assign_Guest_user_page {
     public void setGuest_to_client() {
 
         setGuest_to_client();
+        System.out.println("");
     }
 
     public void setSearch_Guest() {
 
         Search_Guest.sendKeys("gopal");
+        System.out.println("");
+
     }
 
     public void setSingle_guest() { single_guest.click();
@@ -59,7 +56,8 @@ public class Assign_Guest_user_page {
 
     }
 
-    public void setAll_guest() {
+    public void setAll_guest() throws InterruptedException {
+        Thread.sleep(3000);
         all_guest.click();
     }
 

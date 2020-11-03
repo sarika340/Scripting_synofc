@@ -12,4 +12,5 @@ Feature: To Assign the Permissions to Guest Users
     Then Select the Guest User
     Then Select the Permission options
     Then Click on Submit
+    Then close the browser
 

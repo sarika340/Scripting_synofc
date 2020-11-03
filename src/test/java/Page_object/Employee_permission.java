@@ -27,7 +27,6 @@ public class Employee_permission {
     WebElement Employee_Permission;
     @FindBy(xpath = "//*[text()='Submit']")
     WebElement submit_button_emp;
-
     public Employee_permission() {
 
     }
@@ -66,8 +65,6 @@ public class Employee_permission {
     }
 
     public void setSubmit_button(String hexcolor,int count,String access) throws InterruptedException {
-
-
 
         for(int i=1;i<=8;i++)
         {

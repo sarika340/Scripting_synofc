@@ -47,28 +47,38 @@ public class Register_variable_data_page {
    WebElement Doucument_name;
     @FindBy(xpath="//*[text()=\"save\"]")
     WebElement Save_button;
-          //Actions items----------------------------------------------------------------------------------------------------------------
+    @FindBy(xpath="//*[text()='Variable Data']")
+    WebElement text;
+    @FindBy(xpath="//*[@placeholder=\"Search\"]")
+    WebElement search;
+    @FindBy(xpath="(//*[text()=\"delete\"])[2]")
+    WebElement delete;
+    @FindBy(xpath="(//*[text()=\"delete\"])[4]")
+    WebElement delete_popup;
+
+
+    //Actions items----------------------------------------------------------------------------------------------------------------
     public void set()
     {
         login.click();
-        Assert.assertEquals("SyncOffice" ,driver.getTitle());
-        System.out.println("Successfully Syncoffice URL launched");
     }
     public void setusername(String uname)
     {
         Username.clear();
         Username.sendKeys(uname);
+        System.out.println("Enter the email id");
     }
     public void Setpassword(String pass)
     {
         password.clear();
         password.sendKeys(pass);
+        System.out.println("Enter the password");
     }
     public void setLogin_button()
     {
+        System.out.println("click on Login");
         login_button.click();
-        Assert.assertEquals("SyncOffice" ,driver.getTitle());
-        System.out.println("Syncoffice Home Page Displayed");
+
     }
     public void setMaster()
     {
@@ -86,12 +96,8 @@ public class Register_variable_data_page {
     {
         clint.click();
     }
-    public void setRegister()
-{
-
-    Register.click();
-
-}
+    public void setRegister() {
+    Register.click(); }
     public void setAdd_register() {
         Add_register.click();
     }
@@ -102,12 +108,46 @@ public class Register_variable_data_page {
         Doucument_name.sendKeys(doc_name);
     }
 
-    public void setSave_button(String dac_name) throws InterruptedException {
+    public boolean setSave_button(String dac_name) throws InterruptedException {
+        boolean result =false;
+             Save_button.click();
+             Thread.sleep(5000);
+
+        if(text.isDisplayed())
+        {
+            search.sendKeys(dac_name);
+            Thread.sleep(2000);
+            if(driver.findElements(By.xpath("//*[starts-with(text(),'"+dac_name+"')]")).size()>1)
+            {
+                System.out.println(" New User successfully added in Guest User");
+                Thread.sleep(5000);
+                delete.click();
+                System.out.println("delete Guest User");
+                Thread.sleep(5000);
+                delete_popup.click();
+                System.out.println("delete Guest User pop up appears");
+                result =true;
+            }
+            else
+            {
+                System.out.println(" New User not added in Guest User");
+            }
+        }
+        else
+        {
+            System.out.println("Guest User page not displaying once clicked on submit button");
+        }
+               return result;
+
+    }
 
 
-        Save_button.click();
-        Thread.sleep(5000);
-        if(driver.findElements(By.xpath("//*[text()='Variable Data']")).size()>0) {
+
+
+
+
+
+      /*  if(driver.findElements(By.xpath("//*[text()='Variable Data']")).size()>0) {
             List<WebElement> elements = driver.findElements(By.xpath("//tbody//tr"));
             int count = elements.size();
             System.out.println("Count of Register Variable - " + count);
@@ -135,7 +175,7 @@ public class Register_variable_data_page {
         else{
 
             System.out.println(" Employe not added ");
-        }
+        }*/
     }
-}
+
 

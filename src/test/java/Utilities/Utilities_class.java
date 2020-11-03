@@ -15,7 +15,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Random;
 
-public class Base_Class {
+public class Utilities_class {
 
     public WebDriver ldriver;
     public WebDriver driver;
