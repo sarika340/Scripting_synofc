@@ -31,7 +31,6 @@ public class Employee_permission {
 
     }
 
-
     public void setRole_permission() {
 
         Role_permission.click();
