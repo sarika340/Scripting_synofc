@@ -20,7 +20,6 @@ public class Client_to_staff {
 
         //span[contains(text(),'Staff to Client')]
         System.out.println("hello sarika");
-
         System.setProperty("Webdriver.chromeDriver", ".//chromedriver");
 
         WebDriver driver = new ChromeDriver();
