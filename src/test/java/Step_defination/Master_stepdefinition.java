@@ -577,10 +577,9 @@ System.out.println("Select Legal Entity");
     public void select_Management_Entity_Which_shows_Assigned_list_with_Legal_Entity() {
         System.out.println("Select Management Entity ");
     }
-
     @Then("Enter Account Purpose")
     public void enter_Account_Purpose() {
-        System.out.println("Enter Account Purpose");
+        System.out.println("Enter Account  Purpose");
 
     }
 
