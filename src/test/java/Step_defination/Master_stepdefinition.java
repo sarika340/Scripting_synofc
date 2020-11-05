@@ -27,7 +27,7 @@ public Guest_permission_page pages;
 public Assign_Guest_user_page  Assign_Guest;
 public Client_to_staff staff;
 public Staff_permission permission;
-
+public Gl_account_page Gl_page;
 
     //...........................................................................................................
 //............................Register Varible data..(Client)......................................................
@@ -102,7 +102,6 @@ public Staff_permission permission;
             Actions actions =new Actions(driver);
             WebElement closeMenuOption = driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[1]/div[3]/div/div/div[1]/div[2]"));
             actions.moveToElement(closeMenuOption).perform();
-            driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
             System.out.println("page_should_display");
             Thread.sleep(2000);
         }
@@ -407,7 +406,6 @@ System.out.println("guest user");
     }
     @When("Select Client from the list")
     public void select_Client_from_the_list() throws InterruptedException {
-      // driver.findElement(By.xpath("//*[text()=\"IBM\"]\n")).click();
         Thread.sleep(4000);
         staff.setDrop_down();
         System.out.println("Select the Client ");
@@ -416,14 +414,12 @@ System.out.println("guest user");
 
     @Then("Select Staff to Assign")
     public void select_Staff_to_Assign() throws InterruptedException {
-      // driver.findElement(By.xpath("//*[@type=\"checkbox\"]")).click();
         staff.setAll_client();
 
         Thread.sleep(2000);
     }
     @Then("Select Locations of Selected Client")
     public void select_Locations_of_Selected_Client() throws InterruptedException {
-       // driver.findElement(By.xpath("( //*[@type=\"checkbox\"])[4]")).click();
         Thread.sleep(3000);
         staff.setAll_staff();
         System.out.println("Select Locations of Selected Client ");
@@ -518,6 +514,75 @@ System.out.println("guest user");
 
 
 
+
+
+
+    @Then("Click on Account Reconciliation")
+    public void click_on_Account_Reconciliation() throws InterruptedException {
+                Gl_page=new Gl_account_page(driver);
+        Gl_page.setAc_button();
+        Thread.sleep(3000);
+    }
+
+    @Then("Hover on Right Side panel")
+    public void hover_on_Right_Side_panel() throws InterruptedException {
+        Gl_page.setMouse();
+        Thread.sleep(3000);
+
+
+    }
+
+    @Then("Click on GL Account")
+    public void click_on_GL_Account() {
+        Gl_page.setGl_account();
+System.out.println("Click on GL Account");
+    }
+
+    @Then("Click on Add Button on View GL Account")
+    public void click_on_Add_Button_on_View_GL_Account() throws InterruptedException {
+        Thread.sleep(3000);
+        Gl_page.setAdd();
+    }
+
+    @When("Enter GL Account Code")
+    public void enter_GL_Account_Code() throws InterruptedException {
+        Thread.sleep(3000);
+        Gl_page.setGl_ode();
+        Thread.sleep(3000);
+
+    }
+
+    @When("Enter GL Description")
+    public void enter_GL_Description() throws InterruptedException {
+        Gl_page.setDiscription();
+        Thread.sleep(3000);
+
+
+    }
+
+    @When("Select GL Category")
+    public void select_GL_Category() throws InterruptedException {
+
+        Gl_page.setDell();
+        Thread.sleep(3000);
+
+    }
+
+    @When("Select Legal Entity")
+    public void select_Legal_Entity() {
+System.out.println("Select Legal Entity");
+    }
+
+    @When("Select Management Entity \\(Which shows Assigned list with Legal Entity)")
+    public void select_Management_Entity_Which_shows_Assigned_list_with_Legal_Entity() {
+        System.out.println("Select Management Entity ");
+    }
+
+    @Then("Enter Account Purpose")
+    public void enter_Account_Purpose() {
+        System.out.println("Enter Account Purpose");
+
+    }
 
 
 

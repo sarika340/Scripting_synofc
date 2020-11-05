@@ -88,8 +88,6 @@ public class Register_variable_data_page {
     public void setMouse_over_clint() throws InterruptedException {
         Actions actions = new Actions(driver);
         WebElement menuOption = driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[1]/div[2]/div/div/div/div/nav/div[3]/div[1]/div[1]/span"));
-        //Mouse hover menuOption 'Employee'
-        Thread.sleep(2000);
         actions.moveToElement(menuOption).perform();
     }
     public void setClint()

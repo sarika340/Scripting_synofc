@@ -1,11 +1,11 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:/home/nisha/master_syncoffice/Feature_file/Cloud_feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:/home/nisha/master_syncoffice/Feature_file/Account_recociliation.feature");
 formatter.feature({
-  "name": "To Create a folder using Header Option Icon",
+  "name": "To Add GL Account - on Assignment of Sub GL Account",
   "description": "",
   "keyword": "Feature"
 });
 formatter.scenario({
-  "name": "To Create a folder - Header Option",
+  "name": "To Add GL Account",
   "description": "",
   "keyword": "Scenario"
 });
@@ -60,51 +60,101 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Click on Cloud",
+  "name": "Click on Account Reconciliation",
   "keyword": "And "
 });
 formatter.match({
-  "location": "Master_stepdefinition.click_on_Cloud()"
+  "location": "Master_stepdefinition.click_on_Account_Reconciliation()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Click on My Cloud",
+  "name": "Hover on Right Side panel",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "Master_stepdefinition.click_on_My_Cloud()"
+  "location": "Master_stepdefinition.hover_on_Right_Side_panel()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Click on Create Folder Icon",
+  "name": "Click on GL Account",
   "keyword": "And "
 });
 formatter.match({
-  "location": "Master_stepdefinition.click_on_Create_Folder_Icon()"
+  "location": "Master_stepdefinition.click_on_GL_Account()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Create folder pop up opens Name a new Folder",
+  "name": "Click on Add Button on View GL Account",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "Master_stepdefinition.click_on_Add_Button_on_View_GL_Account()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Enter GL Account Code",
   "keyword": "When "
 });
 formatter.match({
-  "location": "Master_stepdefinition.create_folder_pop_up_opens_Name_a_new_Folder()"
+  "location": "Master_stepdefinition.enter_GL_Account_Code()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Click On Create Button",
+  "name": "Enter GL Description",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "Master_stepdefinition.enter_GL_Description()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Select GL Category",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "Master_stepdefinition.select_GL_Category()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Select Legal Entity",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "Master_stepdefinition.select_Legal_Entity()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Select Management Entity (Which shows Assigned list with Legal Entity)",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "Master_stepdefinition.select_Management_Entity_Which_shows_Assigned_list_with_Legal_Entity()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Enter Account Purpose",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "Master_stepdefinition.click_On_Create_Button()"
+  "location": "Master_stepdefinition.enter_Account_Purpose()"
 });
 formatter.result({
   "status": "passed"
