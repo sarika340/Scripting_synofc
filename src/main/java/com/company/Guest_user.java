@@ -56,6 +56,8 @@ Guest_user {
         Thread.sleep(2000);
         driver.findElement(By.xpath("(//*[text()=\"add\"])[5]")).click();
         Thread.sleep(2000);
+
+
         driver.findElement(By.xpath("(//*[@focusable=\"false\"])[11]"));
         System.out.println("date");
         WebElement element= driver.findElement(By.xpath("(//*[@focusable=\"false\"])[11] "));
