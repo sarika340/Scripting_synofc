@@ -24,7 +24,6 @@ public class Utilities_class {
 
         return RandomStringUtils.randomAlphabetic(count);
     }
-
     public static String randomnemeric(int count) {
 
         return RandomStringUtils.randomNumeric(count);

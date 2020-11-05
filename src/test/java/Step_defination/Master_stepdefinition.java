@@ -286,7 +286,6 @@ public Gl_account_page Gl_page;
         Thread.sleep(3000);
         emp.setAll_company();
         System.out.println("Select all Company");
-
     }
     @Then("Click On Submit To Assign the Selected Company")
     public void click_On_Submit_To_Assign_the_Selected_Company() throws InterruptedException {
@@ -572,7 +571,6 @@ System.out.println("Click on GL Account");
     public void select_Legal_Entity() {
 System.out.println("Select Legal Entity");
     }
-
     @When("Select Management Entity \\(Which shows Assigned list with Legal Entity)")
     public void select_Management_Entity_Which_shows_Assigned_list_with_Legal_Entity() {
         System.out.println("Select Management Entity ");

@@ -16,3 +16,4 @@ Feature: To Add GL Account - on Assignment of Sub GL Account
     And  	Select Management Entity (Which shows Assigned list with Legal Entity)
     Then 	Enter Account Purpose
     Then 	Verify
+
