@@ -190,7 +190,6 @@ dec.sendKeys(random_Second_name);
         Thread.sleep(5000);
         mg.click();
         Thread.sleep(5000);
-
         add_circle.click();
 
     }
