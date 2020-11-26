@@ -70,7 +70,7 @@ public class Gl_account_Upload_file {
 
         if (search.isDisplayed()) {
             Thread.sleep(8000);
-            search.sendKeys("cfdd");
+            search.sendKeys("123");
             System.out.println(" New User successfully added in Cost center");
             Thread.sleep(8000);
             delete.click();

@@ -1,5 +1,5 @@
 Feature:To Add GL Category
-  Scenario: To Add GL Account
+  Scenario: To Add GL Category
     Given I launch chrome browser
     When I open Url "https://www.syncoffice.com/module-test-dashboard/dashboard"
     Then I Click on login button
@@ -14,7 +14,7 @@ Feature:To Add GL Category
     Then 	Verify the Category
 
 
-  Scenario: To Add GL Account
+  Scenario: To Add GL Category file
     Given I launch chrome browser
     When I open Url "https://www.syncoffice.com/module-test-dashboard/dashboard"
     Then I Click on login button
@@ -26,5 +26,5 @@ Feature:To Add GL Category
     And 	Click on Import Icon on View GL Category
     And 	Select the file from the GL Category list
     And 	Click on Save Button on GL Category
-    And 	Save bulk data on GL Category
-    Then 	Verify bulk data
+    And 	Save  data on GL Category
+    Then 	Verify upload file

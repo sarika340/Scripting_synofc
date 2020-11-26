@@ -19,7 +19,7 @@ public class Download_Reco_Status {
     }
     @FindBy(xpath="//*[text()=\"settings\"]")
     WebElement setting;
-    @FindBy(xpath="//*[text()=\"Reco Status\"]")
+    @FindBy(xpath="//*[text()=\"Reco and download reco Status\"]")
     WebElement Reco_status;
     @FindBy(xpath="//*[text()=\"cloud_upload\"]")
     WebElement cloud;

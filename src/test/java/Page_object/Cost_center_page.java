@@ -32,7 +32,7 @@ public class Cost_center_page {
     WebElement remark;
     @FindBy(xpath = "//*[text()=\"save\"]")
     WebElement save;
-    @FindBy(xpath = "(//*[@type=\"text\"])[8]")
+    @FindBy(xpath = "(//*[@type=\"text\"])[5]")
     WebElement varify;
     @FindBy(xpath = "(//*[text()=\"delete\"])[4]")
     WebElement delete;

@@ -63,7 +63,7 @@ public class Gl_Category_upload_file {
 
         if (select.isDisplayed()) {
             Thread.sleep(8000);
-            select.sendKeys(number);
+            select.sendKeys("cfdd");
             Thread.sleep(8000);
             // select.sendKeys(random_name);
             System.out.println(" New User successfully added in Cost center");

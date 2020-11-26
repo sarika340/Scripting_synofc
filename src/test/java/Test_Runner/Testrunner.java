@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
 
 
 
-        features ="/home/nisha/master_syncoffice/Features/Bulkdata",glue = "Step_defination"
+        features ="/home/nisha/master_syncoffice/Features/Upload file_Sub_Gl_account",glue = "Step_defination"
      //  , monochrome = true /*  display the console output in a proper readable format */
        , dryRun = false
 

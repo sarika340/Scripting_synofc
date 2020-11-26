@@ -1088,6 +1088,21 @@ emp_role.setDOB();
 
 
 
+    @Then("Click on sub GL Account")
+    public void click_on_sub_GL_Account() {
+      System.out.println("Click on sub GL Account");  // Write code here that turns the phrase above into concrete actions
+    }
+
+    @Then("Click on Import Icon on View sub GL Account")
+    public void click_on_Import_Icon_on_View_sub_GL_Account() {
+        System.out.println("Click on Import Icon on View sub GL Account");
+    }
+
+    @Then("Verify  sub GL Account file")
+    public void verify_sub_GL_Account_file() {
+        System.out.println("Verify  sub GL Account file");
+
+    }
 
 
 
@@ -1118,17 +1133,17 @@ emp_role.setDOB();
         System.out.println("Select the file from the list");
 
     }
-
-    @Then("Save bulk data")
-    public void save_bulk_data() {
+    @Then("Save file data")
+    public void save_file_data() {
         System.out.println("Select the file from the list");
+        // Write code here that turns the phrase above into concrete actions
     }
 
-    @Then("Verify bulk data")
-    public void verify_bulk_data() {
+    @Then("Verify  GLaccount file")
+    public void verify_GLaccount_file() {
         System.out.println("Select the file from the list");
+        // Write code here that turns the phrase above into concrete actions
     }
-
 
 
 
@@ -1164,10 +1179,15 @@ emp_role.setDOB();
 
     }
 
-    @Then("Save bulk data on GL Category")
-    public void save_bulk_data_on_GL_Category() {
-        System.out.println("Save bulk data on GL Category");
+    @Then("Save  data on GL Category")
+    public void save_data_on_GL_Category() {
+        System.out.println("Save  data on GL Category");
+    }
 
+    @Then("Verify upload file")
+    public void verify_upload_file() {
+        System.out.println("Verify upload file");
+        // Write code here that turns the phrase above into concrete actions
     }
 
 
@@ -1261,7 +1281,7 @@ cost.setVarify();
 
 
     //..................................................................................................
-//...........(Reco status)............................................................
+//...........(Reco and download reco status)............................................................
 // ..........................................................................................
     @Then("Click on Settings")
     public void click_on_Settings() throws InterruptedException {
@@ -1270,27 +1290,27 @@ cost.setVarify();
 
     }
 
-    @Then("Click on Reco Status Pane")
+    @Then("Click on Reco and download reco Status Pane")
     public void click_on_Reco_Status_Pane() throws InterruptedException {
         Reco.setAdd();
 
     }
 
-    @Then("Click on Add button on View Reco Status")
+    @Then("Click on Add button on View Reco and download reco Status")
     public void click_on_Add_button_on_View_Reco_Status() throws InterruptedException {
         Reco.setSearch();
-                System.out.println("Click on Reco Status Pane");
+                System.out.println("Click on Reco and download reco Status Pane");
     }
 
-    @Then("Enter the Name on Reco Status")
+    @Then("Enter the Name on Reco and download reco Status")
     public void enter_the_Name_on_Reco_Status() {
-        System.out.println("Enter the Name on Reco Status");
+        System.out.println("Enter the Name on Reco and download reco Status");
 
     }
 
-    @Then("Enter the Description on Reco Status")
+    @Then("Enter the Description on Reco and download reco Status")
     public void enter_the_Description_on_Reco_Status() {
-        System.out.println("Enter the Description on Reco Status");
+        System.out.println("Enter the Description on Reco and download reco Status");
 
     }
 
@@ -1323,7 +1343,7 @@ cost.setVarify();
 
     @Then("Click on Score Pane")
     public void click_on_Score_Pane() throws InterruptedException {
-       score.setSearch();
+     //  score.setSearch();
         System.out.println("Click on Score Pane");
 
     }
@@ -1355,25 +1375,31 @@ cost.setVarify();
     //..................................................................................................
 //...........(cost center bulk data)............................................................
 // ..........................................................................................
-    @Then("Hover on Right Side panel Cost Center bulk data")
-    public void hover_on_Right_Side_panel_Cost_Centre_bulk_data() throws InterruptedException {
-                bulkcost.setMouse();
+    @Then("Hover on Right Side panel Setting \\(Cost Centre)")
+    public void hover_on_Right_Side_panel_Setting_Cost_Centre() throws InterruptedException {
+        bulkcost.setMouse();
     }
 
-    @Then("Click on Import Icon on View Cost Center bulk")
-    public void click_on_Import_Icon_on_View_Cost_Centre_bulk() {
-        System.out.println("Click on Import Icon on View Cost Center bulk");
-
+    @Then("Click on Import Icon on View Cost Centre")
+    public void click_on_Import_Icon_on_View_Cost_Centre() throws InterruptedException {
+        System.out.println("Click on Import Icon on View Cost Centre");
     }
 
-    @Then("Select the file from the list for Cost Center bulk")
-    public void select_the_file_from_the_list_for_Cost_Centre_bulk() {
-        System.out.println("Select the file from the list for Cost Center bulk");
+    @Then("Select the file from the list for Cost Centre")
+    public void select_the_file_from_the_list_for_Cost_Centre() {
+        System.out.println("Select the file from the list for Cost Centre");
     }
 
-    @Then("Click on Save Button on Cost Center")
+    @Then("Click on Save Button on Cost Centre")
     public void click_on_Save_Button_on_Cost_Centre() {
-        System.out.println("\"Click on Save Button on Cost Center");
+        System.out.println("Click on Save Button on Cost Centre");
+
+    }
+
+    @Then("Verify cost center file")
+    public void verify_cost_center_file() {
+        System.out.println("Verify cost center file");
+
     }
 
 
@@ -1385,25 +1411,29 @@ cost.setVarify();
 
 
     //..................................................................................................
-//...........(Reco status bulk data)............................................................
+//...........(Reco and download reco status bulk data)............................................................
 // ..........................................................................................
-    @Then("Click on Reco Status")
+    @Then("Click on Reco and download reco Status")
     public void click_on_Reco_Status() throws InterruptedException {
                 reco_bulk.setSetting();
-        System.out.println("Click on Reco Status");
+        System.out.println("Click on Reco and download reco Status");
 
     }
 
-    @Then("Click on Import Icon on View Reco Status")
+    @Then("Click on Import Icon on View Reco and download reco Status")
     public void click_on_Import_Icon_on_View_Reco_Status() {
-        System.out.println("Click on Import Icon on View Reco Status");
+        System.out.println("Click on Import Icon on View Reco and download reco Status");
     }
 
-    @Then("Select the file from the Reco Status list")
+    @Then("Select the file from the Reco and download reco Status list")
     public void select_the_file_from_the_Reco_Status_list() {
-        System.out.println("Select the file from the Reco Status list");
+        System.out.println("Select the file from the Reco and download reco Status list");
     }
+    @Then("Click on Download button")
+    public void click_on_Download_button() {
+        System.out.println("Click on Download button");
 
+    }
 
 
 

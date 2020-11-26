@@ -18,7 +18,7 @@ public class Reco_status_page {
     }
     @FindBy(xpath="//*[text()=\"settings\"]")
     WebElement setting;
-    @FindBy(xpath="//*[text()=\"Reco Status\"]")
+    @FindBy(xpath="//*[text()=\"Reco and download reco Status\"]")
     WebElement Reco_status;
     @FindBy(xpath="//*[text()=\"add\"]")
     WebElement add;
@@ -49,11 +49,11 @@ public class Reco_status_page {
         Thread.sleep(8000);
         reconame.sendKeys(random_name);
         Thread.sleep(8000);
-        decription.sendKeys(random_num);
+        decription.sendKeys(random_name+random_num);
         Thread.sleep(8000);
         save.click();
         Thread.sleep(8000);
-        search.sendKeys(random_name);
+     //   search.sendKeys(random_name);
         Thread.sleep(8000);
 
         close.click();
@@ -64,7 +64,7 @@ public class Reco_status_page {
 
         if (search.isDisplayed()) {
             Thread.sleep(8000);
-            search.sendKeys(random_name);
+            search.sendKeys(random_num);
             System.out.println(" New User successfully added in  Reco_status");
             Thread.sleep(8000);
             // delete.click();
