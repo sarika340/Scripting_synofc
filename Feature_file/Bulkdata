@@ -1,0 +1,58 @@
+Feature: To Add GL Account - on Assignment of Sub GL Account
+  Scenario: To Add GL Account
+    Given I launch chrome browser
+    When I open Url "https://www.syncoffice.com/module-test-dashboard/dashboard"
+    Then I Click on login button
+    And I enter UserName "damawalemidc@gmail.com" And Password "Creta_123"
+    And I Click on Login
+    And 	Click on Account Reconciliation
+    Then 	Hover on Right Side panel
+    And 	Click on GL Account
+    And 	Click on Import Icon on View GL Account
+    And 	Select the file from the list
+    And 	Click on Save Button
+    And 	Save bulk data
+    Then 	Verify bulk data
+
+  Scenario: To Add Reco Status
+    Given  I launch chrome browser
+    When   I open Url "https://www.syncoffice.com/module-test-dashboard/dashboard"
+    Then   I Click on login button
+    And    I enter UserName "damawalemidc@gmail.com" And Password "Creta_123"
+    And    I Click on Login
+    And 	Click on Account Reconciliation
+    And 	Click on Settings
+    And 	Click on Reco Status
+    And 	Click on Import Icon on View Reco Status
+    And 	Select the file from the Reco Status list
+    And 	Click on Save Button
+    Then 	Verify
+
+
+  Scenario: To Add Score
+    Given  I launch chrome browser
+    When   I open Url "https://www.syncoffice.com/module-test-dashboard/dashboard"
+    Then   I Click on login button
+    And    I enter UserName "damawalemidc@gmail.com" And Password "Creta_123"
+    And    I Click on Login
+    And 	Click on Account Reconciliation
+    And 	Click on Settings Score download data
+    And 	Click on Import Icon on View Score
+    And 	Select the file from the list download
+    And 	Click on Save Button
+    Then 	Verify
+
+
+  Scenario: To Add GL Account
+    Given I launch chrome browser
+    When I open Url "https://www.syncoffice.com/module-test-dashboard/dashboard"
+    Then I Click on login button
+    And I enter UserName "damawalemidc@gmail.com" And Password "Creta_123"
+    And I Click on Login
+    And 	Click on Account Reconciliation
+    Then 	Hover on Right Side panel Cost Centre bulk data
+    And 	Click on Import Icon on View Cost Centre bulk
+    And 	Select the file from the list for Cost Centre bulk
+    And 	Click on Save Button on Cost Centre
+    And 	Save bulk data
+    Then 	Verify bulk data

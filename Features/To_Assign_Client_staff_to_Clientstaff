@@ -12,7 +12,6 @@ Feature: To_Assign_Client_staff_to_Clientstaff
     When Select Client from the list
     Then Select Staff to Assign
     Then Select Locations of Selected Client
-    Then close the browser
 
 
 

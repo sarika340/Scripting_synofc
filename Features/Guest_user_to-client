@@ -12,5 +12,5 @@ Feature: To Assign Guest User to Client
     Then Select the Guest User field
     Then Client, Location(s), Department(s)
     Then click on Submit_button to Assign the CGuest Users to Client
-    Then close the browser
+
 

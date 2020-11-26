@@ -1,0 +1,30 @@
+Feature:To Add GL Category
+  Scenario: To Add GL Account
+    Given I launch chrome browser
+    When I open Url "https://www.syncoffice.com/module-test-dashboard/dashboard"
+    Then I Click on login button
+    And I enter UserName "damawalemidc@gmail.com" And Password "Creta_123"
+    And I Click on Login
+    And 	Click on Account Reconciliation
+    Then 	Hover on Right Side panel GL Category
+    And 	Click on GL Category
+    And 	Click on Add Button on GL Category
+    And 	Enter Name on Add Account Category Drawer
+    And  	Enter Description on Account Category Drawer
+    Then 	Verify the Category
+
+
+  Scenario: To Add GL Account
+    Given I launch chrome browser
+    When I open Url "https://www.syncoffice.com/module-test-dashboard/dashboard"
+    Then I Click on login button
+    And I enter UserName "damawalemidc@gmail.com" And Password "Creta_123"
+    And I Click on Login
+    And 	Click on Account Reconciliation
+    Then 	Hover on Right Side panel GL Category
+    And 	Click on GL Category bulk data
+    And 	Click on Import Icon on View GL Category
+    And 	Select the file from the GL Category list
+    And 	Click on Save Button on GL Category
+    And 	Save bulk data on GL Category
+    Then 	Verify bulk data

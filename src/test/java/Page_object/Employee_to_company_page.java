@@ -25,9 +25,9 @@ public class Employee_to_company_page {
     WebElement All_company;
     @FindBy(xpath = "//*[text()=\"Submit\"]")
     WebElement submit;
-    @FindBy(xpath = "//*[@type=\"checkbox\"][2]")
+    @FindBy(xpath = "(//*[@type=\"checkbox\"])[2]")
     WebElement one_emp;
-    @FindBy(xpath = "(//*[@type=\"checkbox\"])[6]")
+    @FindBy(xpath = "(//*[@type=\"checkbox\"])[7]")
     WebElement one_company;
 
     public void setEmployee_to_Company() {
@@ -44,7 +44,10 @@ public class Employee_to_company_page {
         driver.findElement(By.xpath("//*[@type=\"checkbox\"][1]")).click();
         System.out.println("Click on Employee");
     }
-    public void setAll_company() {
+    public void setAll_company() throws InterruptedException {
+        //All_emp.click();
+        Thread.sleep(8000);
+
         All_company.click();
     }
 
@@ -52,8 +55,12 @@ public class Employee_to_company_page {
         submit.click();
         Thread.sleep(8000);
         one_emp.click();
+        Thread.sleep(8000);
         one_company.click();
+        Thread.sleep(8000);
         submit.click();
+        Thread.sleep(8000);
+
 
 
 

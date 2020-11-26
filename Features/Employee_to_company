@@ -1,4 +1,4 @@
-Feature: To Assign the employee to the Company -Location - Department
+ Feature: To Assign the employee to the Company -Location - Department
   Scenario: To Assign Selected Employees to the Company
     Given I launch chrome browser
     When I open Url "https://www.syncoffice.com/module-test-dashboard/dashboard"
@@ -11,7 +11,6 @@ Feature: To Assign the employee to the Company -Location - Department
     And Click on Employee to Company
     When  Select Employee Company,Departments
     Then Click On Submit To Assign the Selected Company
-    Then close the browser
 
 
 

@@ -11,6 +11,5 @@ Feature: To Assign the Staff permission
     Then Click on Client Name to give Permissions
     Then Select the type of permissions
     Then Click on Submit Button
-    Then close the browser
 
 

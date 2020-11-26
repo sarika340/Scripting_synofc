@@ -1,0 +1,25 @@
+Feature: To Add Sub GL Account - on Reconciled -yes
+  Scenario: To Add Sub GL Account
+    Given  I launch chrome browser
+    When   I open Url "https://www.syncoffice.com/module-test-dashboard/dashboard"
+    Then   I Click on login button
+    And    I enter UserName "damawalemidc@gmail.com" And Password "Creta_123"
+    And    I Click on Login
+    And 	Click on Account Reconciliation
+    Then 	Hover on Sub GL Account
+    And 	Click on Sub GL Account
+    And 	Click on Add Button on View sub GL Account
+    And      Select the  Gl Account
+    And 	Enter Name which should be associated_with Sub GL Account
+    And 	Enter GL_Description Sub GL Account
+    And    	Select on cost center Sub GL Account
+    And 	Select Legal Entity to assign a Management entity with_sub Gl account
+    And    	Select on Management Entity’s Sub GL Account
+    And Enter Base currency nd Risk category
+    And Enter Amount range
+    And Enter the Account Purpose
+    And Enter the JVM FLOW
+    And     save and verify
+
+
+

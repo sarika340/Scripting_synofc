@@ -12,4 +12,3 @@ Feature: Roles_and_permission_employee_permission
     When  Search Employee
     Then select the Read Permission options for Modules
     Then Select Modules to apply to the specific Employee
-    Then close the browser

@@ -1,0 +1,14 @@
+Feature: To Add GL Account - on Assignment of Sub GL Account
+  Scenario: To Add GL Account
+    Given I launch chrome browser
+    When I open Url "https://www.syncoffice.com/module-test-dashboard/dashboard"
+    Then I Click on login button
+    And I enter UserName "damawalemidc@gmail.com" And Password "Creta_123"
+    And I Click on Login
+    And 	Click on Account Reconciliation
+    Then 	Hover on Right Side panel Cost Center bulk data
+    And 	Click on Import Icon on View Cost Center bulk
+    And 	Select the file from the list for Cost Center bulk
+    And 	Click on Save Button on Cost Center
+    And 	Save bulk data
+    Then 	Verify bulk data

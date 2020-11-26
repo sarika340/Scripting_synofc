@@ -17,7 +17,6 @@ import java.util.Random;
 
 public class Utilities_class {
 
-    public WebDriver ldriver;
     public WebDriver driver;
 
     public static String randomalphabet(int count) {

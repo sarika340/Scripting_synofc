@@ -75,3 +75,15 @@ Feature: Syncoffice Login
 
 
 
+  Scenario: To Create a folder - Header Option
+    Given I launch chrome browser
+    When I open Url "https://www.syncoffice.com/module-test-dashboard/dashboard"
+    Then I Click on login button
+    And I enter UserName "sarika.mishra@candytechnologies.in" And Password "123456"
+    And I Click on Login
+    And Click on Cloud
+    Then Click on My Cloud
+    And Click on Create Folder Icon
+    When  Create folder pop up opens Name a new Folder
+    Then Click On Create Button
+    Then Verify

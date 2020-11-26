@@ -31,15 +31,15 @@ public class Guest_user_page {
     WebElement guset_user_page;
     @FindBy(xpath="(//*[text()=\"add\"])[5]")
     WebElement click_on_add_button;
-    @FindBy(xpath="(//*[@type=\"text\"])[6]")
+    @FindBy(xpath="(//*[@type=\"text\"])[3]")
     WebElement first_name;
-    @FindBy(xpath="(//*[@type=\"text\"])[8]")
+    @FindBy(xpath="(//*[@type=\"text\"])[5]")
     WebElement Last_name;
     @FindBy(xpath="//*[@type=\"tel\"]")
     WebElement mobile_number;
-    @FindBy(xpath="(//*[@type=\"email\"])[2]")
+    @FindBy(xpath="(//*[@type=\"email\"])[1]")
     WebElement email;
-    @FindBy(xpath="(//*[@type=\"text\"])[9]")
+    @FindBy(xpath="(//*[@type=\"text\"])[6]")
     WebElement Company_name;
     @FindBy(xpath="(//*[@type=\"button\"]//*[@focusable=\"false\"])[4]")
     WebElement Login_from;
@@ -51,9 +51,9 @@ public class Guest_user_page {
     WebElement date;
     @FindBy(xpath="//*[text()=\"save\"]")
     WebElement save;
-    @FindBy(xpath="(//*[text()=\"Guest User\"])[3]")
+    @FindBy(xpath="(//*[text()=\"Guest User\"])[2]")
     WebElement guestuser;
-    @FindBy(xpath="//*[@placeholder=\"Search\"]")
+    @FindBy(xpath="(//*[@ type=\"text\"])[2]")
     WebElement search;
     @FindBy(xpath="(//*[text()=\"delete\"])[2]")
     WebElement delete;
@@ -78,6 +78,8 @@ public class Guest_user_page {
         System.out.println("Mouse hover on 'Register' from Menu");
         Thread.sleep(2000);
         guestuser.isDisplayed();
+        actions.moveToElement(guset_user_page).perform();
+
         System.out.println(guset_user_page.getText());
         Thread.sleep(2000);
 
@@ -124,31 +126,19 @@ public class Guest_user_page {
         Thread.sleep(2000);
         save.click();
         Thread.sleep(8000);
-        if(guestuser.isDisplayed())
-        {
-         search.sendKeys(random_first_name);
-            Thread.sleep(2000);
-            if(driver.findElements(By.xpath("//*[starts-with(text(),'"+random_first_name+"')]")).size()>1)
-            {
-                System.out.println(" New User successfully added in Guest User");
-                Thread.sleep(5000);
-                delete.click();
-                System.out.println("delete Guest User");
-                Thread.sleep(5000);
-                delete_popup.click();
-                System.out.println("delete Guest User pop up appears");
-
-            }
-            else
-            {
-                System.out.println(" New User not added in Guest User");
-            }
+        if (search.isDisplayed()) {
+            Thread.sleep(8000);
+            search.sendKeys(random_first_name);
+            Thread.sleep(8000);
+            System.out.println(" New User successfully added in Cost center");
+            Thread.sleep(8000);
+            delete.click();
+            Thread.sleep(8000);
+            delete_popup.click();
+            System.out.println(" New User successfully Deleted in Cost center");
+        } else {
+            System.out.println(" New User not added in Cost center");
         }
-        else
-            {
-            System.out.println("Guest User page not displaying once clicked on submit button");
-        }
-
 
     }
 
