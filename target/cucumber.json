@@ -1,0 +1,699 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-11-20T09:39:07.407Z",
+        "line": 2,
+        "name": "To Add GL Account",
+        "description": "",
+        "id": "to-add-gl-account---on-assignment-of-sub-gl-account;to-add-gl-account",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 12487217879,
+              "status": "passed"
+            },
+            "line": 3,
+            "name": "I launch chrome browser",
+            "match": {
+              "location": "Master_stepdefinition.i_launch_chrome_browser()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 9827965947,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "I open Url \"https://www.syncoffice.com/module-test-dashboard/dashboard\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://www.syncoffice.com/module-test-dashboard/dashboard\"",
+                  "offset": 11
+                }
+              ],
+              "location": "Master_stepdefinition.i_open_Url(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 7589909255,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I Click on login button",
+            "match": {
+              "location": "Master_stepdefinition.i_Click_on_login_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3478539970,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I enter UserName \"damawalemidc@gmail.com\" And Password \"Creta_123\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"damawalemidc@gmail.com\"",
+                  "offset": 17
+                },
+                {
+                  "val": "\"Creta_123\"",
+                  "offset": 55
+                }
+              ],
+              "location": "Master_stepdefinition.i_enter_UserName_And_Password(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2254507711,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I Click on Login",
+            "match": {
+              "location": "Master_stepdefinition.i_Click_on_Login()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//*[text()\u003d\"Account Reconciliation\"]\"}\n  (Session info: chrome\u003d86.0.4240.75)\n  (Driver info: chromedriver\u003d2.41.578700 (2f1ed5f9343c13f73144538f15c00b370eda6706),platform\u003dLinux 4.15.0-122-generic x86_64) (WARNING: The server did not provide any stacktrace information)\nCommand duration or timeout: 0 milliseconds\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027nisha-Lenovo-ideapad-320-15ISK\u0027, ip: \u0027127.0.1.1\u0027, os.name: \u0027Linux\u0027, os.arch: \u0027amd64\u0027, os.version: \u00274.15.0-122-generic\u0027, java.version: \u00271.8.0_272\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.41.578700 (2f1ed5f9343c13..., userDataDir: /tmp/.org.chromium.Chromium...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:40291}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 86.0.4240.75, webStorageEnabled: true}\nSession ID: 69dd640728d79c9fd0daec289c0c0c2c\n*** Element info: {Using\u003dxpath, value\u003d//*[text()\u003d\"Account Reconciliation\"]}\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\n\tat org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)\n\tat org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)\n\tat org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)\n\tat org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)\n\tat org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:353)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)\n\tat com.sun.proxy.$Proxy14.click(Unknown Source)\n\tat Page_object.Gl_account_page.setAc_button(Gl_account_page.java:73)\n\tat Step_defination.Master_stepdefinition.click_on_Account_Reconciliation(Master_stepdefinition.java:571)\n\tat ✽.Click on Account Reconciliation(file:/home/nisha/master_syncoffice/Feature_file/Bulkdata:8)\n",
+              "duration": 57949428,
+              "status": "failed"
+            },
+            "line": 8,
+            "name": "Click on Account Reconciliation",
+            "match": {
+              "location": "Master_stepdefinition.click_on_Account_Reconciliation()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 58990,
+              "status": "skipped"
+            },
+            "line": 9,
+            "name": "Hover on Right Side panel",
+            "match": {
+              "location": "Master_stepdefinition.hover_on_Right_Side_panel()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 34066,
+              "status": "skipped"
+            },
+            "line": 10,
+            "name": "Click on GL Account",
+            "match": {
+              "location": "Master_stepdefinition.click_on_GL_Account()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 29180,
+              "status": "skipped"
+            },
+            "line": 11,
+            "name": "Click on Import Icon on View GL Account",
+            "match": {
+              "location": "Master_stepdefinition.click_on_Import_Icon_on_View_GL_Account()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 56981,
+              "status": "skipped"
+            },
+            "line": 12,
+            "name": "Select the file from the list",
+            "match": {
+              "location": "Master_stepdefinition.select_the_file_from_the_list()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 84046,
+              "status": "skipped"
+            },
+            "line": 13,
+            "name": "Click on Save Button",
+            "match": {
+              "location": "Master_stepdefinition.click_on_Save_Button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 55596,
+              "status": "skipped"
+            },
+            "line": 14,
+            "name": "Save bulk data",
+            "match": {
+              "location": "Master_stepdefinition.save_bulk_data()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 59570,
+              "status": "skipped"
+            },
+            "line": 15,
+            "name": "Verify bulk data",
+            "match": {
+              "location": "Master_stepdefinition.verify_bulk_data()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-11-20T09:39:43.194Z",
+        "line": 17,
+        "name": "To Add Reco Status",
+        "description": "",
+        "id": "to-add-gl-account---on-assignment-of-sub-gl-account;to-add-reco-status",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 11388882797,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "I launch chrome browser",
+            "match": {
+              "location": "Master_stepdefinition.i_launch_chrome_browser()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 10271110220,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "I open Url \"https://www.syncoffice.com/module-test-dashboard/dashboard\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://www.syncoffice.com/module-test-dashboard/dashboard\"",
+                  "offset": 11
+                }
+              ],
+              "location": "Master_stepdefinition.i_open_Url(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 10159780905,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I Click on login button",
+            "match": {
+              "location": "Master_stepdefinition.i_Click_on_login_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3438458736,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "I enter UserName \"damawalemidc@gmail.com\" And Password \"Creta_123\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"damawalemidc@gmail.com\"",
+                  "offset": 17
+                },
+                {
+                  "val": "\"Creta_123\"",
+                  "offset": 55
+                }
+              ],
+              "location": "Master_stepdefinition.i_enter_UserName_And_Password(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2248898437,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "I Click on Login",
+            "match": {
+              "location": "Master_stepdefinition.i_Click_on_Login()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 28675270090,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "Click on Account Reconciliation",
+            "match": {
+              "location": "Master_stepdefinition.click_on_Account_Reconciliation()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 16796084698,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "Click on Settings",
+            "match": {
+              "location": "Master_stepdefinition.click_on_Settings()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 47247540137,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "Click on Reco Status",
+            "match": {
+              "location": "Master_stepdefinition.click_on_Reco_Status()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 100964,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "Click on Import Icon on View Reco Status",
+            "match": {
+              "location": "Master_stepdefinition.click_on_Import_Icon_on_View_Reco_Status()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 74435,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "Select the file from the Reco Status list",
+            "match": {
+              "location": "Master_stepdefinition.select_the_file_from_the_Reco_Status_list()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 77617,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "Click on Save Button",
+            "match": {
+              "location": "Master_stepdefinition.click_on_Save_Button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 90403,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "Verify",
+            "match": {
+              "location": "Master_stepdefinition.verify()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-11-20T09:41:53.425Z",
+        "line": 32,
+        "name": "To Add Score",
+        "description": "",
+        "id": "to-add-gl-account---on-assignment-of-sub-gl-account;to-add-score",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 13363447145,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "I launch chrome browser",
+            "match": {
+              "location": "Master_stepdefinition.i_launch_chrome_browser()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 17477999286,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "I open Url \"https://www.syncoffice.com/module-test-dashboard/dashboard\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://www.syncoffice.com/module-test-dashboard/dashboard\"",
+                  "offset": 11
+                }
+              ],
+              "location": "Master_stepdefinition.i_open_Url(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 13283145331,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "I Click on login button",
+            "match": {
+              "location": "Master_stepdefinition.i_Click_on_login_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3466114888,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "I enter UserName \"damawalemidc@gmail.com\" And Password \"Creta_123\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"damawalemidc@gmail.com\"",
+                  "offset": 17
+                },
+                {
+                  "val": "\"Creta_123\"",
+                  "offset": 55
+                }
+              ],
+              "location": "Master_stepdefinition.i_enter_UserName_And_Password(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2232170592,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "I Click on Login",
+            "match": {
+              "location": "Master_stepdefinition.i_Click_on_Login()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 25930501293,
+              "status": "passed"
+            },
+            "line": 38,
+            "name": "Click on Account Reconciliation",
+            "match": {
+              "location": "Master_stepdefinition.click_on_Account_Reconciliation()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 50274589523,
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "Click on Settings Score download data",
+            "match": {
+              "location": "Master_stepdefinition.click_on_Settings_Score_download_data()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 111836,
+              "status": "passed"
+            },
+            "line": 40,
+            "name": "Click on Import Icon on View Score",
+            "match": {
+              "location": "Master_stepdefinition.click_on_Import_Icon_on_View_Score()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 74315,
+              "status": "passed"
+            },
+            "line": 41,
+            "name": "Select the file from the list download",
+            "match": {
+              "location": "Master_stepdefinition.select_the_file_from_the_list_download()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 66554,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "Click on Save Button",
+            "match": {
+              "location": "Master_stepdefinition.click_on_Save_Button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 62259,
+              "status": "passed"
+            },
+            "line": 43,
+            "name": "Verify",
+            "match": {
+              "location": "Master_stepdefinition.verify()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-11-20T09:43:59.461Z",
+        "line": 46,
+        "name": "To Add GL Account",
+        "description": "",
+        "id": "to-add-gl-account---on-assignment-of-sub-gl-account;to-add-gl-account",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 11344994831,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "I launch chrome browser",
+            "match": {
+              "location": "Master_stepdefinition.i_launch_chrome_browser()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 14732406925,
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "I open Url \"https://www.syncoffice.com/module-test-dashboard/dashboard\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://www.syncoffice.com/module-test-dashboard/dashboard\"",
+                  "offset": 11
+                }
+              ],
+              "location": "Master_stepdefinition.i_open_Url(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 12806037824,
+              "status": "passed"
+            },
+            "line": 49,
+            "name": "I Click on login button",
+            "match": {
+              "location": "Master_stepdefinition.i_Click_on_login_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3477125405,
+              "status": "passed"
+            },
+            "line": 50,
+            "name": "I enter UserName \"damawalemidc@gmail.com\" And Password \"Creta_123\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"damawalemidc@gmail.com\"",
+                  "offset": 17
+                },
+                {
+                  "val": "\"Creta_123\"",
+                  "offset": 55
+                }
+              ],
+              "location": "Master_stepdefinition.i_enter_UserName_And_Password(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2218931360,
+              "status": "passed"
+            },
+            "line": 51,
+            "name": "I Click on Login",
+            "match": {
+              "location": "Master_stepdefinition.i_Click_on_Login()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//*[text()\u003d\"Account Reconciliation\"]\"}\n  (Session info: chrome\u003d86.0.4240.75)\n  (Driver info: chromedriver\u003d2.41.578700 (2f1ed5f9343c13f73144538f15c00b370eda6706),platform\u003dLinux 4.15.0-122-generic x86_64) (WARNING: The server did not provide any stacktrace information)\nCommand duration or timeout: 0 milliseconds\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027nisha-Lenovo-ideapad-320-15ISK\u0027, ip: \u0027127.0.1.1\u0027, os.name: \u0027Linux\u0027, os.arch: \u0027amd64\u0027, os.version: \u00274.15.0-122-generic\u0027, java.version: \u00271.8.0_272\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.41.578700 (2f1ed5f9343c13..., userDataDir: /tmp/.org.chromium.Chromium...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:45073}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 86.0.4240.75, webStorageEnabled: true}\nSession ID: 0469081f4623450590bc7b8f2b21583b\n*** Element info: {Using\u003dxpath, value\u003d//*[text()\u003d\"Account Reconciliation\"]}\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\n\tat org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)\n\tat org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)\n\tat org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)\n\tat org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)\n\tat org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:353)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)\n\tat com.sun.proxy.$Proxy14.click(Unknown Source)\n\tat Page_object.Gl_account_page.setAc_button(Gl_account_page.java:73)\n\tat Step_defination.Master_stepdefinition.click_on_Account_Reconciliation(Master_stepdefinition.java:571)\n\tat ✽.Click on Account Reconciliation(file:/home/nisha/master_syncoffice/Feature_file/Bulkdata:52)\n",
+              "duration": 42401633,
+              "status": "failed"
+            },
+            "line": 52,
+            "name": "Click on Account Reconciliation",
+            "match": {
+              "location": "Master_stepdefinition.click_on_Account_Reconciliation()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 42135,
+              "status": "skipped"
+            },
+            "line": 53,
+            "name": "Hover on Right Side panel Cost Centre bulk data",
+            "match": {
+              "location": "Master_stepdefinition.hover_on_Right_Side_panel_Cost_Centre_bulk_data()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 21909,
+              "status": "skipped"
+            },
+            "line": 54,
+            "name": "Click on Import Icon on View Cost Centre bulk",
+            "match": {
+              "location": "Master_stepdefinition.click_on_Import_Icon_on_View_Cost_Centre_bulk()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 18455,
+              "status": "skipped"
+            },
+            "line": 55,
+            "name": "Select the file from the list for Cost Centre bulk",
+            "match": {
+              "location": "Master_stepdefinition.select_the_file_from_the_list_for_Cost_Centre_bulk()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 17839,
+              "status": "skipped"
+            },
+            "line": 56,
+            "name": "Click on Save Button on Cost Centre",
+            "match": {
+              "location": "Master_stepdefinition.click_on_Save_Button_on_Cost_Centre()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 23935,
+              "status": "skipped"
+            },
+            "line": 57,
+            "name": "Save bulk data",
+            "match": {
+              "location": "Master_stepdefinition.save_bulk_data()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 20819,
+              "status": "skipped"
+            },
+            "line": 58,
+            "name": "Verify bulk data",
+            "match": {
+              "location": "Master_stepdefinition.verify_bulk_data()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "To Add GL Account - on Assignment of Sub GL Account",
+    "description": "",
+    "id": "to-add-gl-account---on-assignment-of-sub-gl-account",
+    "keyword": "Feature",
+    "uri": "file:/home/nisha/master_syncoffice/Feature_file/Bulkdata",
+    "tags": []
+  }
+]
