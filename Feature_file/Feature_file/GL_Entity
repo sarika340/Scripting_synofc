@@ -1,5 +1,5 @@
-Feature: To assign the GL Sub Account
-  Scenario :To assign the GL Sub Account
+Feature: To Add Legal Entity - From / Edit Add GL Account Page
+  Scenario: To upload file GLaccount
     Given I launch chrome browser
     When I open Url "https://www.syncoffice.com/module-test-dashboard/dashboard"
     Then I Click on login button
@@ -7,12 +7,22 @@ Feature: To assign the GL Sub Account
     And I Click on Login
     And 	Click on Account Reconciliation
     Then 	Hover on Right Side panel
-    And 	Click on Settings
-    And 	Click on GL Sub Account Code to Action Checkbox (with GL Sub Account Desc)
-    And 	Enter the Length to keep for the Options
-    And 	Select the Input type for the Types
-    And 	Click on Save
-    Then 	Verify
+    And 	Click on GL Account
+    And 	Click on Import Icon on View GL Account
+    And 	Select the file from the list
+    And 	Click on Save Button
+    And 	Save file data
+    Then 	Verify  GLaccount file
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -18,3 +18,5 @@ Feature: To Add Management Entity - From / Edit Add GL Account Page
     Then    Click on GL_Entity_page
     Then    Fill all the mandatory field And should enable save  button
 
+
+

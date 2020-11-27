@@ -6,18 +6,20 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class Gl_account_Upload_file {
+public class Employee_upload_file_RC {
     public WebDriver driver;
     public String random_name = Utilities_class.randomalphabet(5);
     public String random_Second_name =Utilities_class.randomalphabet(5);
     public String number =Utilities_class.randomnemeric(5);
 
 
-    public Gl_account_Upload_file(WebDriver rdriver) {
+    public Employee_upload_file_RC(WebDriver rdriver) {
         driver = rdriver;
         PageFactory.initElements(rdriver, this);
     }
-
+    //*[text()="developer_board"]
+    @FindBy(xpath = "//*[text()=\"people_outline\"]")
+    WebElement mouse;
     @FindBy(xpath = "//*[text()=\"cloud_download\"]")
     WebElement cloud;
     @FindBy(xpath = "//*[text()=\"Download Sample\"]")
@@ -32,7 +34,7 @@ public class Gl_account_Upload_file {
     @FindBy(xpath = "//div//input[@type=\"file\"]")
     WebElement ac_utton;
     @FindBy(xpath = "//*[text()=\"account_balance_wallet\"]")
-    WebElement mouse;
+    WebElement mouse1;
     @FindBy(xpath = "//*[text()=\"Account Reconciliation\"]")
     WebElement acbutton;
     @FindBy(xpath = "//*[text()=\"Account Reconciliation\"]")
@@ -47,38 +49,30 @@ public class Gl_account_Upload_file {
     WebElement close;
     @FindBy(xpath="(//*[@type=\"text\"])[5]")
     WebElement search;
-    public void setCloud() throws InterruptedException {
+    public void setFile() throws InterruptedException {
+        mouse.click();
+
         Thread.sleep(3000);
         cloud.click();
         Thread.sleep(5000);
-      //  download.click();
+        //  download.click();
         Thread.sleep(8000);
 //file.click();
         Thread.sleep(8000);
 
-        file.sendKeys("/home/nisha/Downloads/new gl_acount.xls");
+        file.sendKeys("/home/nisha/Downloads/new-emplyee.xls");
         Thread.sleep(8000);
 
-        save.click();
-        Thread.sleep(5000);
 
-        close.click();
-        Thread.sleep(5000);
 
-        mouse.click();
-        Thread.sleep(5000);
+        if (save.isDisplayed()) {
+            Thread.sleep(8000);
+            save.click();
+            System.out.println(" New User successfully added in Cost center");
+            Thread.sleep(8000);
 
-        if (search.isDisplayed()) {
-            Thread.sleep(8000);
-            search.sendKeys("123");
-            System.out.println(" New User successfully added in GLaccount");
-            Thread.sleep(8000);
-            delete.click();
-            Thread.sleep(8000);
-            dlt_2.click();
-            System.out.println(" New User successfully Deleted in GLaccount");
         } else {
-            System.out.println(" New User not added in GLaccount");
+            System.out.println(" New User not added in Cost center");
         }
 
 

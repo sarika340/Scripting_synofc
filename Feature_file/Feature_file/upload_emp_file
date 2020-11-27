@@ -1,0 +1,15 @@
+Feature: To upload employee file
+  Scenario: To upload employee file
+    Given  I launch chrome browser
+    When   I open Url "https://www.syncoffice.com/module-test-dashboard/dashboard"
+    Then   I Click on login button
+    And    I enter UserName "damawalemidc@gmail.com" And Password "Creta_123"
+    And    I Click on Login
+    And 	Click on Account Reconciliation
+    Then 	Hover on Right Side panel
+    And 	Click on  Employee tab
+    And 	Click on Import Icon on View  Employee tab
+    And 	Select the file from the list
+    And 	Click on Save Button
+    Then 	Verify  Employee file
+

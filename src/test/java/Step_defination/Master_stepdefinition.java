@@ -46,7 +46,7 @@ public Trial_balance_impoter trial;
 public Gl_Category_upload_file bulk_category;
 public Download_Score scoredata;
 //public static Logger log;
-
+public Employee_upload_file_RC emp_upload;
     static File junitReport;
     static BufferedWriter junitWriter;
     //...........................................................................................................
@@ -59,6 +59,7 @@ public Download_Score scoredata;
                 System.setProperty("Webdriver.chromeDriver", ".//chromedriver");
             driver = new ChromeDriver();
 Reco=new Reco_status_page(driver);
+emp_upload=new Employee_upload_file_RC(driver);
                 bulkcost=new Cost_Center_upload_file(driver);
                 gl=new Gl_category(driver);
                 emp_role=new EMP_Account_Reconcilation(driver);
@@ -1083,7 +1084,6 @@ emp_role.setDOB();
     @Then("Click on Save and verify Trial Balance")
     public void click_on_Save_and_verify_Trial_Balance() throws InterruptedException {
                 trial.setSave();
-        // Write code here that turns the phrase above into concrete actions
     }
 
 
@@ -1136,13 +1136,11 @@ emp_role.setDOB();
     @Then("Save file data")
     public void save_file_data() {
         System.out.println("Select the file from the list");
-        // Write code here that turns the phrase above into concrete actions
     }
 
     @Then("Verify  GLaccount file")
     public void verify_GLaccount_file() {
         System.out.println("Select the file from the list");
-        // Write code here that turns the phrase above into concrete actions
     }
 
 
@@ -1187,7 +1185,6 @@ emp_role.setDOB();
     @Then("Verify upload file")
     public void verify_upload_file() {
         System.out.println("Verify upload file");
-        // Write code here that turns the phrase above into concrete actions
     }
 
 
@@ -1330,6 +1327,9 @@ cost.setVarify();
 
 
 
+
+
+
     //..................................................................................................
 //...........(score pane)............................................................
 // ..........................................................................................
@@ -1411,24 +1411,25 @@ cost.setVarify();
 
 
     //..................................................................................................
-//...........(Reco and download reco status bulk data)............................................................
+//...........(Reco and download reco status  data)............................................................
 // ..........................................................................................
-    @Then("Click on Reco and download reco Status")
+    @Then("Click on Reco Status")
     public void click_on_Reco_Status() throws InterruptedException {
-                reco_bulk.setSetting();
-        System.out.println("Click on Reco and download reco Status");
-
+       Reco.setSetting();
     }
 
-    @Then("Click on Import Icon on View Reco and download reco Status")
+    @Then("Click on Import Icon on View Reco Status")
     public void click_on_Import_Icon_on_View_Reco_Status() {
-        System.out.println("Click on Import Icon on View Reco and download reco Status");
+        System.out.println("Click on Import Icon on View Reco Status");
+
     }
 
-    @Then("Select the file from the Reco and download reco Status list")
+    @Then("Select the file from the Reco Status list")
     public void select_the_file_from_the_Reco_Status_list() {
-        System.out.println("Select the file from the Reco and download reco Status list");
+        System.out.println("Select the file from the Reco Status list");
+
     }
+
     @Then("Click on Download button")
     public void click_on_Download_button() {
         System.out.println("Click on Download button");
@@ -1459,6 +1460,39 @@ cost.setVarify();
     public void select_the_file_from_the_list_download() {
         System.out.println("Select the file from the list download");
     }
+
+
+
+
+
+
+
+
+
+    @Then("Click on  Employee tab")
+    public void click_on_Employee_tab() throws InterruptedException {
+        emp_upload=new Employee_upload_file_RC(driver);
+emp_upload.setFile();
+        System.out.println("Click on  Employee tab");
+
+    }
+
+    @Then("Click on Import Icon on View  Employee tab")
+    public void click_on_Import_Icon_on_View_Employee_tab() {
+        System.out.println("Click on Import Icon on View  Employee tab");
+
+    }
+
+    @Then("Verify  Employee file")
+    public void verify_Employee_file() {
+        System.out.println("Verify  Employee file");
+
+    }
+
+
+
+
+
 
 
 

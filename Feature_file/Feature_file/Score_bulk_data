@@ -1,0 +1,13 @@
+Feature: To Add Score
+  Scenario: To Add Score
+    Given  I launch chrome browser
+    When   I open Url "https://www.syncoffice.com/module-test-dashboard/dashboard"
+    Then   I Click on login button
+    And    I enter UserName "damawalemidc@gmail.com" And Password "Creta_123"
+    And    I Click on Login
+    And 	Click on Account Reconciliation
+    And 	Click on Settings Score download data
+    And 	Click on Import Icon on View Score
+    And 	Select the file from the list download
+    And 	Click on Download button
+    Then 	Verify

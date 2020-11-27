@@ -73,14 +73,14 @@ public class Gl_category {
             select.sendKeys(number);
             Thread.sleep(8000);
            // select.sendKeys(random_name);
-            System.out.println(" New User successfully added in Cost center");
+            System.out.println(" New User successfully added in Gl category");
             Thread.sleep(8000);
             delete.click();
             Thread.sleep(8000);
             dlt_2.click();
-            System.out.println(" New User successfully Deleted in Cost center");
+            System.out.println(" New User successfully Deleted in Gl category");
         } else {
-            System.out.println(" New User not added in Cost center");
+            System.out.println(" New User not added in Gl category");
         }
 
     }
