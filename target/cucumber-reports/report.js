@@ -1,11 +1,11 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:/home/nisha/master_syncoffice/Feature_file/Feature_file/upload_emp_file");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:/home/nisha/master_syncoffice/Cloud.features/To%20Create%20a%20folder%20using%20Header%20option%20Icon");
 formatter.feature({
-  "name": "To upload employee file",
+  "name": "To Create a folder using Header Option Icon",
   "description": "",
   "keyword": "Feature"
 });
 formatter.scenario({
-  "name": "To upload employee file",
+  "name": "To Create a folder - Header Option",
   "description": "",
   "keyword": "Scenario"
 });
@@ -14,7 +14,7 @@ formatter.step({
   "keyword": "Given "
 });
 formatter.match({
-  "location": "Master_stepdefinition.i_launch_chrome_browser()"
+  "location": "stepdefinitions.i_launch_chrome_browser()"
 });
 formatter.result({
   "status": "passed"
@@ -24,7 +24,7 @@ formatter.step({
   "keyword": "When "
 });
 formatter.match({
-  "location": "Master_stepdefinition.i_open_Url(String)"
+  "location": "stepdefinitions.i_open_Url(String)"
 });
 formatter.result({
   "status": "passed"
@@ -34,7 +34,7 @@ formatter.step({
   "keyword": "Then "
 });
 formatter.match({
-  "location": "Master_stepdefinition.i_Click_on_login_button()"
+  "location": "stepdefinitions.i_Click_on_login_button()"
 });
 formatter.result({
   "status": "passed"
@@ -44,7 +44,7 @@ formatter.step({
   "keyword": "And "
 });
 formatter.match({
-  "location": "Master_stepdefinition.i_enter_UserName_And_Password(String,String)"
+  "location": "stepdefinitions.i_enter_UserName_And_Password(String,String)"
 });
 formatter.result({
   "status": "passed"
@@ -54,77 +54,67 @@ formatter.step({
   "keyword": "And "
 });
 formatter.match({
-  "location": "Master_stepdefinition.i_Click_on_Login()"
+  "location": "stepdefinitions.i_Click_on_Login()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Click on Account Reconciliation",
+  "name": "Click on Cloud",
   "keyword": "And "
 });
 formatter.match({
-  "location": "Master_stepdefinition.click_on_Account_Reconciliation()"
+  "location": "stepdefinitions.click_on_Cloud()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Hover on Right Side panel",
+  "name": "Click on My Cloud",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "Master_stepdefinition.hover_on_Right_Side_panel()"
+  "location": "stepdefinitions.click_on_My_Cloud()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Click on  Employee tab",
+  "name": "Click on Create Folder Icon",
   "keyword": "And "
 });
 formatter.match({
-  "location": "Master_stepdefinition.click_on_Employee_tab()"
+  "location": "stepdefinitions.click_on_Create_Folder_Icon()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Click on Import Icon on View  Employee tab",
-  "keyword": "And "
+  "name": "Create folder pop up opens Name a new Folder",
+  "keyword": "When "
 });
 formatter.match({
-  "location": "Master_stepdefinition.click_on_Import_Icon_on_View_Employee_tab()"
+  "location": "stepdefinitions.create_folder_pop_up_opens_Name_a_new_Folder()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Select the file from the list",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "Master_stepdefinition.select_the_file_from_the_list()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Click on Save Button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "Master_stepdefinition.click_on_Save_Button()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Verify  Employee file",
+  "name": "Click On Create Button",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "Master_stepdefinition.verify_Employee_file()"
+  "location": "stepdefinitions.click_On_Create_Button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Verify",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepdefinitions.verify()"
 });
 formatter.result({
   "status": "passed"

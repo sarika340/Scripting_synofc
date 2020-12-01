@@ -1,0 +1,16 @@
+Feature: To add Reco Status
+  Scenario: To Add Reco Status
+    Given  I launch chrome browser
+    When   I open Url "https://www.syncoffice.com/module-test-dashboard/dashboard"
+    Then   I Click on login button
+    And    I enter UserName "damawalemidc@gmail.com" And Password "Creta_123"
+    And    I Click on Login
+    And 	Click on Account Reconciliation
+    And 	Click on Settings
+    And 	Click on Reco Status
+    And 	Click on Import Icon on View Reco Status
+    And 	Select the file from the Reco Status list
+    And 	Click on Save Button
+    And     Search Reco Status which is currently added
+    And     Delete Reco Status
+    And     close the browser

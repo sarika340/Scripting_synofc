@@ -1,0 +1,14 @@
+Feature: To upload file GLaccount
+  Scenario: To Add GL Account
+    Given I launch chrome browser
+    When I open Url "https://www.syncoffice.com/module-test-dashboard/dashboard"
+    Then I Click on login button
+    And I enter UserName "damawalemidc@gmail.com" And Password "Creta_123"
+    And I Click on Login
+    And 	Click on Account Reconciliation
+    Then 	 Click on Import Icon on View GL Account
+    Then      Select the file from the list
+    Then     Click on Save Button
+    Then     Save file data
+    And     Search GL Account which is currently added
+    And     Delete GL Account

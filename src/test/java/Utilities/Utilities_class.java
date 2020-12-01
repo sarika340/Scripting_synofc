@@ -1,12 +1,14 @@
 package Utilities;
+import java.io.File;
+import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+
+import com.google.common.io.Files;
 import org.apache.commons.lang.RandomStringUtils;
 import org.joda.time.LocalDate;
 import org.joda.time.format.DateTimeFormatter;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -14,6 +16,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.Random;
+
 
 public class Utilities_class {
 
@@ -42,8 +45,8 @@ public class Utilities_class {
         return strDate;
     }
 
-    public static String before_date() {
 
+    public static String before_date() {
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         //Getting current date
         Calendar cal = Calendar.getInstance();
@@ -53,8 +56,9 @@ public class Utilities_class {
         System.out.println("Date after Addition: " + before_date);
         return before_date;
     }
-    public static String Add_date() {
 
+
+    public static String Add_date() {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
         //Getting current date
         Calendar cal = Calendar.getInstance();
@@ -67,6 +71,16 @@ public class Utilities_class {
         System.out.println("Date after Addition: "+Add_date);
         return Add_date;
     }
+
+
+
+public static void screenshot(WebDriver driver) throws IOException {
+    TakesScreenshot tc=(TakesScreenshot)driver;
+   File src_file= tc.getScreenshotAs(OutputType.FILE);
+    File dest_file= new  File("");
+    Files.copy(src_file,dest_file);
+}
+
 
 
     }
