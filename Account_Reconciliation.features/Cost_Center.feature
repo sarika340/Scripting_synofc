@@ -5,7 +5,7 @@ Feature: To Add Cost Centre
     Then I Click on login button
     And I enter UserName "damawalemidc@gmail.com" And Password "Creta_123"
     And I Click on Login
-    And 	Click on Account Reconciliation
+    And 	Click on Account Reconciliation tab
     Then 	Hover on Right Side panel Cost Center
     And 	Click on Cost Center
     And 	Click on Add Button on View Cost Center

@@ -1,6 +1,7 @@
  package Step_defination;
 
 import Account_Reconciliation_page.*;
+import Cloud_Pages.*;
 import Master_GuestUser_page.Assign_Guest_user_page;
 import Master_GuestUser_page.Guest_permission_page;
 import Master_GuestUser_page.Guest_user_page;
@@ -21,9 +22,11 @@ import org.openqa.selenium.interactions.Actions;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
+import java.util.logging.Logger;
 
  public class stepdefinitions extends Utilities_class
 { String doc1= Utilities_class.randomalphabet(4);
+
 public Guest_user_page Guest;
 public Employee_to_company_page emp;
 public Register_variable_data_page lp;
@@ -31,8 +34,11 @@ public WebDriver driver;
 public Reco_status_page Reco;
 public Cost_Center_upload_file bulkcost;
 public Management_entity_page entity;
-    public Cloud_Create_folder_page Cloud;
+public Cloud_folder Cloud;
+public To_Set_the_Limit_to_the_employee_to_Download_and_Upload limit;
+public To_Download_the_file_page dwn_file;
 public Gl_category gl;
+public Cloud_move_file_location move;
 public Download_Reco_Status reco_bulk;
 public Gl_account_Upload_file bulk;
 public Employee_permission Roles;
@@ -48,9 +54,13 @@ public Score_page score;
 public Trial_balance_impoter trial;
 public Gl_Category_upload_file bulk_category;
 public Download_Score scoredata;
+public Auto_delete_file auto_dlt;
 //public static Logger log;
+public Cloud_copy_file copy_file;
+
+public Cloud_move_file_location move_file;
 public Employee_upload_file_RC emp_upload;
- //   static Logger log = Logger.getLogger(Master_stepdefinition.class.getName());
+  // static Logger log = Logger.getLogger(Master_stepdefinition.class.getName());
 
 
 
@@ -59,31 +69,38 @@ public Employee_upload_file_RC emp_upload;
 //............................................................................................................
             @Given("I launch chrome browser")
     public void i_launch_chrome_browser() throws InterruptedException {
-                Thread.sleep(8000);
+                Thread.sleep(2000);
                 System.setProperty("Webdriver.chromeDriver", ".//chromedriver");
-            driver = new ChromeDriver();
+                 driver = new ChromeDriver();
 Reco=new Reco_status_page(driver);
+dwn_file=new To_Download_the_file_page(driver);
+copy_file=new Cloud_copy_file(driver);
+move=new Cloud_move_file_location(driver);
 emp_upload=new Employee_upload_file_RC(driver);
                 bulkcost=new Cost_Center_upload_file(driver);
                 gl=new Gl_category(driver);
                 emp_role=new EMP_Account_Reconcilation(driver);
                 scoredata= new Download_Score(driver);
                 Guest=new Guest_user_page(driver);
+                auto_dlt=new Auto_delete_file(driver);
             pages=new Guest_permission_page(driver);
                 reco_bulk =  new Download_Reco_Status(driver);
             emp=new Employee_to_company_page(driver);
             Roles=new Employee_permission(driver);
             staff=new Client_to_staff(driver);
+                Gl_page= new Gl_account_page(driver);
                 score =new Score_page(driver);
+                move_file=new Cloud_move_file_location(driver);
                 bulk_category=new Gl_Category_upload_file(driver);
                 trial=new Trial_balance_impoter(driver);
             permission=new Staff_permission(driver);
             lp = new Register_variable_data_page(driver);
             Assign_Guest=new Assign_Guest_user_page(driver);
-                Cloud =new Cloud_Create_folder_page(driver);
+                Cloud =new Cloud_folder(driver);
                 sub_Gl=new sub_GL_account(driver);
                 cost=new Cost_center_page(driver);
                 bulk=new Gl_account_Upload_file(driver);
+                limit=new To_Set_the_Limit_to_the_employee_to_Download_and_Upload(driver);
                 entity=new Management_entity_page(driver);
                 System.out.println("launch google page");
             Thread.sleep(2000);
@@ -219,7 +236,6 @@ emp_upload=new Employee_upload_file_RC(driver);
         Actions actions =new Actions(driver);
         WebElement closeMenuOption = driver.findElement(By.xpath("//body/div[@id='root']/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/span[1]/span[1]/span[1]/input[1]"));
         actions.moveToElement(closeMenuOption).perform();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         System.out.println("Mouse hover on Element");
         Thread.sleep(2000);
         driver.findElement(By.xpath("//body/div[@id='root']/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/span[1]/span[1]/span[1]/input[1]")).click();
@@ -401,7 +417,7 @@ emp_upload=new Employee_upload_file_RC(driver);
         System.out.println("Click On Submit To Assign the Selected Company");
 
         Thread.sleep(4000);
-        driver.close();
+      //  driver.close();
         Thread.sleep(4000);}
 
 
@@ -672,10 +688,20 @@ System.out.println("guest user");
     //..................................................................................................
 //...........(Account Reconciliation=Gl account)............................................................
 // ..........................................................................................
-    @Then("Click on Account Reconciliation")
+    @And("Click on Account Reconciliation tab")
+    public void clickOnAccountReconciliationTab()throws InterruptedException {
+      //  Gl_page.setAc_button();
+        Thread.sleep(3000);
+        driver.findElement(By.xpath("//*[text()=\"Account Reconciliation\"]")).click();
+        System.out.println("Click on Account Reconciliation");
+        Thread.sleep(3000);
+
+    }
+        @Then("Click on Account Reconciliation")
+
     public void click_on_Account_Reconciliation() throws InterruptedException {
-        Gl_page=new Gl_account_page(driver);
         Gl_page.setAc_button();
+       // driver.findElement(By.xpath("//*[text()=\"account_balance_wallet\"]")).click();
         Thread.sleep(3000);
         System.out.println("Click on Account Reconciliation");
 
@@ -683,7 +709,8 @@ System.out.println("guest user");
 
     @Then("Hover on Right Side panel")
     public void hover_on_Right_Side_panel() throws InterruptedException {
-        Gl_page.setMouse();
+       // driver.findElement(By.xpath("//*[text()=\"account_balance_wallet\"]")).click();
+         Gl_page.setMouse();
         Thread.sleep(3000);
         System.out.println("Hover on Right Side panel");
 
@@ -691,8 +718,7 @@ System.out.println("guest user");
     }
 
     @Then("Click on GL Account")
-    public void click_on_GL_Account() {
-        Gl_page.setGl_account();
+    public void click_on_GL_Account() throws InterruptedException {
       System.out.println("Click on GL Account");
     }
 
@@ -726,13 +752,14 @@ System.out.println("guest user");
     @When("Enter All mendetry fields on Gl Category")
     public void enter_All_mendetry_fields_on_Gl_Category() throws InterruptedException {
         Gl_page.setCircle();
+        System.out.println("Enter All mendetry fields on Gl Category");
 
         Thread.sleep(3000);
     }
 
     @When("Click on Add button on Legal Entity")
     public void click_on_Add_button_on_Legal_Entity() {
-        System.out.println("Enter GL Description");
+        System.out.println("Click on Add button on Legal Entity");
 
     }
 
@@ -741,24 +768,26 @@ System.out.println("guest user");
         Gl_page.setCircle1();
 
         Thread.sleep(3000);
+        System.out.println("Enter All mendetry fields on Legal Entity");
 
     }
     @And("Click on Gl Save Button")
     public void clickOnGlSaveButton() {
-        System.out.println("Enter GL Description");
+        System.out.println("Click on Gl Save Button");
 
     }
 
 
     @When("Click on Add button on Managment Entity")
     public void click_on_Add_button_on_Managment_Entity() {
-        System.out.println("Enter GL Description");
+        System.out.println("Click on Add button on Managment Entity");
 
     }
 
     @When("Enter All mendetry fields on Managment Entity")
     public void enter_All_mendetry_fields_on_Managment_Entity() throws InterruptedException {
         Gl_page.setCircle2();
+        System.out.println("Enter All mendetry fields on Managment Entity");
 
     }
     @And("Enter Gl Category, Legal Entity,Managment Entity")
@@ -928,7 +957,7 @@ System.out.println("guest user");
     public void fill_all_the_mandatory_field_And_should_enable_save_button() throws InterruptedException {
         entity.mendtory_fields();
         Thread.sleep(4000);
-        driver.close();
+     //   driver.close();
         System.out.println("Fill all the mandatory field And should enable save  button");
         driver.close();
         Thread.sleep(4000);
@@ -1044,6 +1073,7 @@ System.out.println("guest user");
     @Then("Delete sub Gl account")
     public void delete_sub_Gl_account() {
               System.out.println("Delete sub Gl account");
+        driver.close();
 
     }
 
@@ -1401,26 +1431,30 @@ System.out.println("guest user");
     @Then("Hover on Right Side panel Cost Center")
     public void hover_on_Right_Side_panel_Cost_Center() throws InterruptedException {
         cost=new Cost_center_page(driver);
-         cost.setMouse();
+       //  cost.setMouse();
          System.out.println("Hover on Right Side panel Cost Center");
 
 
     }
     @Then("Click on Cost Center")
-    public void click_on_Cost_Center() {
-                System.out.println("Click on Cost Centre");
+    public void click_on_Cost_Center() throws InterruptedException {
+        cost.setCost();
+        Thread.sleep(3000);
+
+        System.out.println("Click on Cost Centre");
     }
 
     @Then("Click on Add Button on View Cost Center")
     public void click_on_Add_Button_on_View_Cost_Center() throws InterruptedException {
-               cost.setAdd();
+             //  cost.setAdd();
+     //   cost.setAdd();
                System.out.println("Click on Add Button on View Cost Center");
 
     }
 
     @Then("Enter Code on Cost Center")
     public void enter_Code_on_Cost_Center() throws InterruptedException {
-                cost.setCode();
+              cost.setAdd(); // cost.setCode();
                 System.out.println("Enter Code on Cost Center");
 
 
@@ -1428,7 +1462,7 @@ System.out.println("guest user");
 
     @Then("Enter Enter Description on Cost Center")
     public void enter_Enter_Description_on_Cost_Center() throws InterruptedException {
-                cost.setDescription();
+              cost.setDecription();  //cost.setDescription();
                 System.out.println("Enter Enter Description on Cost Center");
 
 
@@ -1436,7 +1470,8 @@ System.out.println("guest user");
 
     @Then("Enter Remarks on Cost Center")
     public void enter_Remarks_on_Cost_Center() throws InterruptedException {
-                cost.setRemark();
+                //cost.setRemark();
+        cost.setRemark();
                 System.out.println("Enter Remarks on Cost Center");
 
     }
@@ -1447,7 +1482,8 @@ System.out.println("guest user");
                System.out.println("Click on Save on Cost Center");
     }
     @Then("Search Cost Centre  which is currently added")
-    public void search_Cost_Centre_which_is_currently_added() {
+    public void search_Cost_Centre_which_is_currently_added() throws InterruptedException {
+                cost.setSearch();
                System.out.println("Search Cost Centre  which is currently added");
 
 
@@ -1455,7 +1491,7 @@ System.out.println("guest user");
 
     @Then("Delete Cost Centre")
     public void delete_Cost_Centre() throws InterruptedException {
-        cost.setVarify();
+        //cost.setVarify();
         System.out.println("Delete Cost Centre");
 
     }
@@ -1756,19 +1792,309 @@ System.out.println("guest user");
 // ..........................................................................................
 
     @And("Select files to Move")
-    public void selectFilesToMove() {
+    public void selectFilesToMove() throws InterruptedException {
+        System.out.println("Select files to Move");
+move.setMs();
     }
 
     @And("Click on Move Icon")
-    public void clickOnMoveIcon() {
+    public void clickOnMoveIcon() throws InterruptedException {
+        System.out.println("Click on Move Icon");
+        move.setButton();
     }
 
     @When("Move Files drawer opens up Select the Location")
-    public void moveFilesDrawerOpensUpSelectTheLocation() {
+    public void moveFilesDrawerOpensUpSelectTheLocation() throws InterruptedException {
+        System.out.println("Move Files drawer opens up Select the Location");
 
+            move.setDrop_down();
     }
 
     @And("Click On Move button")
     public void clickOnMoveButton() {
+        System.out.println("Click On Move button");
+move.setSave();
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //..................................................................................................
+//...........(Cloud files to  copy )............................................................
+// ..........................................................................................
+    @Then("Select files to Copy")
+    public void select_files_to_Copy() throws InterruptedException {
+        copy_file.setMs();
+        System.out.println("Select files to Copy");
+
+    }
+
+    @Then("Click on Copy Icon")
+    public void click_on_Copy_Icon() throws InterruptedException {
+        copy_file.setSearch();
+        System.out.println("Click on Copy Icon");
+
+    }
+
+    @When("Copy Files drawer opens up Select the Location")
+    public void copy_Files_drawer_opens_up_Select_the_Location() throws InterruptedException {
+        copy_file.setButton();
+        System.out.println("Copy Files drawer opens up Select the Location");
+
+    }
+
+    @When("Click On Copy button")
+    public void click_On_Copy_button() throws InterruptedException {
+        Thread.sleep(3000);
+
+        copy_file.setCopy();
+        Thread.sleep(3000);
+
+       copy_file.setDrop_down();
+       Thread.sleep(3000);
+       copy_file.setSave();
+
+        System.out.println("Click On Copy button");
+
+
+
+    }
+
+    @And("Click On save")
+    public void clickOnSave() {
+                System.out.println("Click On save");
+    }
+
+    @And("Search copy file which is currently added")
+    public void searchCopyFileWhichIsCurrentlyAdded() {
+        System.out.println("Search copy file which is currently added");
+
+    }
+
+    @And("Delete file")
+    public void deleteFile() {
+        System.out.println("Delete file");
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    //..................................................................................................
+//...........(Cloud files to  restore )............................................................
+// ..........................................................................................
+
+    @And("Click on Restore Icon")
+    public void clickOnRestoreIcon() throws InterruptedException {
+                auto_dlt.setMs();
+    }
+
+    @When("Restore Drawer opens up then Enter the Days Cycle to Delete the Files")
+    public void restoreDrawerOpensUpThenEnterTheDaysCycleToDeleteTheFiles() {
+        System.out.println("Delete file");
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    //..................................................................................................
+//...........(Cloud files to  restore )............................................................
+// ..........................................................................................
+    @And("Select files to Download")
+    public void selectFilesToDownload() throws InterruptedException {
+        dwn_file.setAdmistration();
+        Thread.sleep(3000);
+        dwn_file.setSerach();
+    }
+
+    @And("Click on Download Icon")
+    public void clickOnDownloadIcon() throws InterruptedException {
+        dwn_file.setCheck_box();
+    }
+
+    @Then("Verify the cloud Download")
+    public void verifyTheCloudDownload() throws InterruptedException{
+        dwn_file.setDownload();
+    }
+
+
+
+
+
+
+
+
+    //..................................................................................................
+//...........(Cloud Limit Icon )............................................................
+// ..........................................................................................
+
+    @And("Click on Limit Icon")
+    public void clickOnLimitIcon() throws InterruptedException {
+                limit.setAdmistration();
+                Thread.sleep(4000);
+                limit.setLimit();
+        Thread.sleep(9000);
+
+        limit.setSearch();
+        Thread.sleep(4000);
+
+        limit.setBox();
+        Thread.sleep(4000);
+        limit.setGB();
+        Thread.sleep(4000);
+
+        limit.setDownload();
+        Thread.sleep(4000);
+
+        limit.setGB1();
+        Thread.sleep(4000);
+
+        limit.setLimit2();
+        Thread.sleep(8000);
+
+        limit.setUpload_limit();
+        Thread.sleep(6000);
+
+        limit.setDownload_limit();
+        Thread.sleep(4000);
+
+
+
+    }
+
+    @When("Select the data Range to upload and Download in Upload Limit and Download Limit")
+    public void selectTheDataRangeToUploadAndDownloadInUploadLimitAndDownloadLimit() {
+
+    }
+
+    @Then("Select the Data Unit")
+    public void selectTheDataUnit() {
+    }
+
+    @And("Seact the File Type")
+    public void seactTheFileType() {
+    }
+
+    @Then("Select the Select the employees to Apply the Data count")
+    public void selectTheSelectTheEmployeesToApplyTheDataCount() {
+    }
+
+    @Then("Click on Limit Button to Use common Selection for Multiple and Select Employee")
+    public void clickOnLimitButtonToUseCommonSelectionForMultipleAndSelectEmployee() {
+    }
+
+    @Then("Click on Save button")
+    public void clickOnSaveButton() {
+    }
+
+    @Then("Verify Limit option")
+    public void verifyLimitOption() {
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //..................................................................................................
+//...........(Cloud mail Icon )............................................................
+// ..........................................................................................
+
+
+    @Then("Select files to send")
+    public void select_files_to_send() {
+
+    }
+
+    @Then("Click on Email Icon")
+    public void click_on_Email_Icon() {
+
+    }
+
+    @When("Email Files drawer opens up and Add To email")
+    public void email_Files_drawer_opens_up_and_Add_To_email() {
+
+    }
+
+    @Then("Click on CC and BCC to add the other Email Recipients")
+    public void click_on_CC_and_BCC_to_add_the_other_Email_Recipients() {
+
+    }
+
+    @Then("Enter Matter to send with file")
+    public void enter_Matter_to_send_with_file() {
+
+    }
+
+    @Then("Click on Zip to ZIp Or Unzip files")
+    public void click_on_Zip_to_ZIp_Or_Unzip_files() {
+
+    }
+
+    @Then("Click On Add button on drawer to add files")
+    public void click_On_Add_button_on_drawer_to_add_files() {
+
+    }
+
+    @Then("Click On Remove button on drawer to Remove files")
+    public void click_On_Remove_button_on_drawer_to_Remove_files() {
+
+    }
+
+    @Then("Click on Send")
+    public void click_on_Send() {
+
+    }
+
+
 }

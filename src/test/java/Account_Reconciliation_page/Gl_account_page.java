@@ -147,6 +147,8 @@ public class Gl_account_page {
     WebElement close1;
     @FindBy(xpath="(//*[@type=\"text\"])[5]")
     WebElement search1;
+    @FindBy(xpath = "//*[text()=\"account_balance_wallet\"]\n")
+    WebElement gl_act;
     public void setAc_button() {
         ac_button.click();
     }
@@ -158,9 +160,13 @@ public class Gl_account_page {
        //WebElement gl= gl_page.getText();
     }
 
-    public void setGl_account( ) {
+    public void setGl_account( ) throws InterruptedException {
+       mouse.click();
+        Thread.sleep(3000);
 
         gl_account.click();
+        Thread.sleep(3000);
+
     }
     public void setAdd( ) {
         add.click();
@@ -202,7 +208,7 @@ public class Gl_account_page {
         mail.sendKeys(random_name+"@gmail.com");
         Thread.sleep(3000);
 
-        System.out.println("Enter email address");
+       // System.out.println("Enter email address");
         name1.sendKeys(Utilities_class.randomalphabet(9));
         Thread.sleep(3000);
 
@@ -285,14 +291,14 @@ public class Gl_account_page {
         if (search.isDisplayed()) {
             Thread.sleep(8000);
             search.sendKeys(number);
-            System.out.println(" New User successfully added in Gl account");
+         //   System.out.println(" New User successfully added in Gl account");
             Thread.sleep(8000);
             delete.click();
             Thread.sleep(8000);
             dlt_2.click();
-            System.out.println(" New User successfully Deleted in Gl account");
+          //  System.out.println(" New User successfully Deleted in Gl account");
         } else {
-            System.out.println(" New User not added in Gl account");
+            System.out.println("  Gl account");
         }}
 
 

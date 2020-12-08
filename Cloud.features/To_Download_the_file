@@ -1,0 +1,13 @@
+Feature: To Download the Selected files - Header Option Icon
+  Scenario: To Download the Selected files - Header Option
+    Given I launch chrome browser
+    When I open Url "https://www.syncoffice.com/module-test-dashboard/dashboard"
+    Then I Click on login button
+    And    I enter UserName "damawalemidc@gmail.com" And Password "Creta_123"
+    And I Click on Login
+    And Click on Cloud
+    Then Click on My Cloud
+    And Select files to Download
+    And Click on Download Icon
+    Then Verify the cloud Download
+

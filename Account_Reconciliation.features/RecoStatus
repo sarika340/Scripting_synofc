@@ -5,7 +5,7 @@ Feature: To add Reco Status
     Then   I Click on login button
     And    I enter UserName "damawalemidc@gmail.com" And Password "Creta_123"
     And    I Click on Login
-    And 	Click on Account Reconciliation
+    And 	Click on Account Reconciliation tab
     And 	Click on Settings
     And 	Click on Reco Status
     And 	Click on Import Icon on View Reco Status

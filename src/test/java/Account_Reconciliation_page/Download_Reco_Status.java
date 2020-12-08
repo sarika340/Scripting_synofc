@@ -63,5 +63,8 @@ public class Download_Reco_Status {
 
 doenload.click();
         doenload1.click();
+        Thread.sleep(7000);
+
+        //driver.close();
     }
 }

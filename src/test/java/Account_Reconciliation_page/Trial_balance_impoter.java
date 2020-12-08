@@ -87,7 +87,7 @@ public class Trial_balance_impoter {
 
     public void setFile() throws InterruptedException {
         file.sendKeys("/home/nisha/Downloads/trialbalanceWithGLSubGLCost (2).xlsx");
-        Thread.sleep(4000);
+        Thread.sleep(9000);
 
     }
 
@@ -103,7 +103,7 @@ public class Trial_balance_impoter {
         dlt_2.click();
         Thread.sleep(4000);
 
-
+//driver.close();
 
 
 

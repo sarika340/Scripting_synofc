@@ -19,9 +19,9 @@ public class Register_variable_data_page {
     @FindBy(xpath="//*[@class='MuiButton-label']")
     WebElement login;
 
-    @FindBy(xpath = "//*[@type='text']\n")
+    @FindBy(xpath = "//*[@type='text']")
     WebElement Username;
-    @FindBy(xpath="//*[@type='password']\n")
+    @FindBy(xpath="//*[@type='password']")
     WebElement password;
     @FindBy(xpath = "//*[text()=\"login\"]")
     WebElement login_button;
@@ -60,13 +60,13 @@ public class Register_variable_data_page {
     }
     public void setusername(String uname)
     {
-        Username.clear();
+       // Username.clear();
         Username.sendKeys(uname);
         System.out.println("Enter the email id");
     }
     public void Setpassword(String pass)
     {
-        password.clear();
+      //  password.clear();
         password.sendKeys(pass);
         System.out.println("Enter the password");
     }
@@ -129,7 +129,7 @@ public class Register_variable_data_page {
         }
         else
         {
-            System.out.println("Guest User page not displaying once clicked on submit button");
+                System.out.println("Guest User page not displaying once clicked on submit button");
         }
                return result;
 

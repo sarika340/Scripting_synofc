@@ -1,0 +1,16 @@
+Feature: To Copy the Selected files - Header Option Icon
+  Scenario: To Copy the Selected files - Header Option
+    Given I launch chrome browser
+    When I open Url "https://www.syncoffice.com/module-test-dashboard/dashboard"
+    Then I Click on login button
+    And    I enter UserName "damawalemidc@gmail.com" And Password "Creta_123"
+    And I Click on Login
+    And Click on Cloud
+    Then Click on My Cloud
+    And Select files to Copy
+    And Click on Copy Icon
+    When Copy Files drawer opens up Select the Location
+    And Click On Copy button
+    And Click On save
+    And Search copy file which is currently added
+    And Delete file

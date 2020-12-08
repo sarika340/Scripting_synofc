@@ -12,8 +12,8 @@ import org.junit.runner.RunWith;
 
 
 
-        features ="/home/nisha/master_syncoffice/Cloud.features/To Move the Selected files - Header Option Icon ",glue = "Step_defination"
-     //  , monochrome = true /*  display the console output in a proper readable format */
+        features ="/home/nisha/master_syncoffice/Cloud.features/Auto_delete_file_from_Restore_Section",glue = "Step_defination"
+      // , monochrome = true /*  display the console output in a proper readable format */
        , dryRun = false
         //to check the mapping is between feature file and step definition
      , plugin = {"html:target/cucumber-reports","pretty"}

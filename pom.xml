@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>groupId</groupId>
+    <groupId>com.capitaworld</groupId>
     <artifactId>master_syncoffice</artifactId>
     <version>1.0-SNAPSHOT</version>
 
@@ -26,7 +26,10 @@
         </repository>
     </repositories>
 
+
     <dependencies>
+
+        <!-- https://mvnrepository.com/artifact/net.masterthought/maven-cucumber-reporting -->
 
         <dependency>
             <groupId>io.cucumber</groupId>
@@ -248,6 +251,8 @@
                         <goals>
                             <goal>generate</goal>
                         </goals>
+                        <sourceDirectory>src</sourceDirectory>
+
                         <configuration>
                             <projectName>master_syncoffice</projectName>
                             <outputDirectory>${project.build.directory}/cucumber-report-html</outputDirectory>

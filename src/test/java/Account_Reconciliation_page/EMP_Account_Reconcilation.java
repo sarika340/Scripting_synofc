@@ -185,6 +185,9 @@ public class EMP_Account_Reconcilation {
         Thread.sleep(5000);
         save.click();
         Thread.sleep(6000);
+        Thread.sleep(8000);
+
+     //   driver.close();
 
     }
 }

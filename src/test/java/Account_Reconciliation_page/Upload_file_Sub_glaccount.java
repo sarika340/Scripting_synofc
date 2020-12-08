@@ -59,7 +59,7 @@ public class Upload_file_Sub_glaccount {
 
         Thread.sleep(3000);
         cloud.click();
-        log.info("click on cloud");
+        log.info("click on cloud_create_folder");
         //  download.click();
 //file.click();
         Thread.sleep(8000);
@@ -85,6 +85,9 @@ public class Upload_file_Sub_glaccount {
             delete.click();
             Thread.sleep(8000);
             dlt_2.click();
+            Thread.sleep(8000);
+
+           // driver.close();
 
             System.out.println(" New User successfully Deleted in sub_Gl_account");
         } else {

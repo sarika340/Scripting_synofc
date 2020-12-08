@@ -1,0 +1,15 @@
+Feature:To Upload files which are already exists
+  Scenario:Upload Files to the Selected Location - Header Option Icon
+Given Launch chrome browser
+When Open Url "https://www.syncoffice.com/module-test-dashboard/dashboard"
+Then Click on login button
+And Enter UserName "sarika.mishra@candytechnologies.in" And Password "123456"
+And Click on Login
+And Click on Cloud
+Then Click on My Cloud
+And Click on Upload
+Then Click on Upload Folder
+Then Select the Files which are already Selected
+Then Click on Upload button
+Then Click update Existing to Update other than Existing
+Then Verify

@@ -14,14 +14,20 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
 import java.util.concurrent.TimeUnit;
+import java.util.logging.Logger;
+
 public class Client_to_staff {
+    public static Logger log;
+
     public static void main(String[] args) throws InterruptedException {
 ////*[text()="9"]
+         Logger log = Logger.getLogger(Client_to_staff.class.getName());
 
         //span[contains(text(),'Staff to Client')]
         System.out.println("hello sarika");
         System.setProperty("Webdriver.chromeDriver", ".//chromedriver");
-
+log.config("sarika");
+log.config("mishra");
         WebDriver driver = new ChromeDriver();
 
         driver.get("https://www.syncoffice.com/module-test-dashboard/dashboard");

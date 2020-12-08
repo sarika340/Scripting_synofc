@@ -11,6 +11,12 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="hamcrest-2.2" level="project" />
+    <orderEntry type="library" name="junit-4.13.1" level="project" />
+    <orderEntry type="library" name="log4j-core-2.14.0" level="project" />
+    <orderEntry type="library" name="log4j-1.2.17" level="project" />
+    <orderEntry type="library" name="jdk-15_windows-x64_bin" level="project" />
+    <orderEntry type="library" name="log4j-1.2.15" level="project" />
     <orderEntry type="library" name="Maven: io.cucumber:cucumber-core:4.4.0" level="project" />
     <orderEntry type="library" name="Maven: io.cucumber:tag-expressions:1.1.1" level="project" />
     <orderEntry type="library" name="Maven: io.cucumber:cucumber-expressions:7.0.2" level="project" />

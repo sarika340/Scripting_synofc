@@ -5,7 +5,7 @@ Feature: To upload file GLaccount
     Then I Click on login button
     And I enter UserName "damawalemidc@gmail.com" And Password "Creta_123"
     And I Click on Login
-    And 	Click on Account Reconciliation
+    And 	Click on Account Reconciliation tab
     Then 	 Click on Import Icon on View GL Account
     Then      Select the file from the list
     Then     Click on Save Button

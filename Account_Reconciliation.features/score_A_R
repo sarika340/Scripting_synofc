@@ -5,7 +5,7 @@ Feature: To Add Score
     Then   I Click on login button
     And    I enter UserName "damawalemidc@gmail.com" And Password "Creta_123"
     And    I Click on Login
-    And 	Click on Account Reconciliation
+    And 	Click on Account Reconciliation tab
     And 	Click on Settings Score
     And 	Click on Score Pane
     And 	Click on Add button on View Score
@@ -23,7 +23,7 @@ Feature: To Add Score
     Then   I Click on login button
     And    I enter UserName "damawalemidc@gmail.com" And Password "Creta_123"
     And    I Click on Login
-    And 	Click on Account Reconciliation
+    And 	Click on Account Reconciliation tab
     And 	Click on Settings Score download data
     And 	Click on Import Icon on View Score
     And 	Select the file from the list download

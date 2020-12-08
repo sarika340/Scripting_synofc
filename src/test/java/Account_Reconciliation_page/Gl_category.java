@@ -77,6 +77,9 @@ public class Gl_category {
             delete.click();
             Thread.sleep(8000);
             dlt_2.click();
+            Thread.sleep(8000);
+
+          //  driver.close();
             System.out.println(" New User successfully Deleted in Gl category");
         } else {
             System.out.println(" New User not added in Gl category");

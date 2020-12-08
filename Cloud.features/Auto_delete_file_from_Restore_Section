@@ -1,0 +1,13 @@
+Feature: To Set days to auto delete files from Restore Section- Header Option Icon
+  Scenario: To Set days to auto delete files from Restore Section - Header Option
+    Given I launch chrome browser
+    When I open Url "https://www.syncoffice.com/module-test-dashboard/dashboard"
+    Then I Click on login button
+    And    I enter UserName "damawalemidc@gmail.com" And Password "Creta_123"
+    And I Click on Login
+    And Click on Cloud
+    Then Click on My Cloud
+    And Click on Restore Icon
+    When Restore Drawer opens up then Enter the Days Cycle to Delete the Files
+    Then Click on Save
+    Then Verify

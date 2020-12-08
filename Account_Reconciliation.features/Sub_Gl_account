@@ -9,7 +9,7 @@ Feature: To Add Sub GL Account - on Reconciled -yes
    Then 	Hover on Sub GL Account
     And 	Click on Sub GL Account
     And 	Click on Add Button on View sub GL Account
-    And      Select the  Gl Account
+    And      Select the  Gl Account tab
     And 	Enter Name which should be associated_with Sub GL Account
     And 	Enter GL_Description Sub GL Account
     And    	Select on cost center Sub GL Account

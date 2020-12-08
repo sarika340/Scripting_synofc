@@ -1,4 +1,4 @@
-package Master_Roles_and_Permission_Page;
+package Cloud_Pages;
 
 import Utilities.Utilities_class;
 import org.openqa.selenium.WebDriver;
@@ -6,10 +6,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class Cloud_Create_folder_page {
+public class Cloud_folder {
     public WebDriver driver;
 
-    public Cloud_Create_folder_page(WebDriver rdriver)
+    public Cloud_folder(WebDriver rdriver)
     {
         driver=rdriver;
         PageFactory.initElements(rdriver,this);

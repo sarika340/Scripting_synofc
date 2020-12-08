@@ -1,10 +1,9 @@
-Feature: To Add GL Account - on Assignment of Sub GL Account
-  Scenario: To Add GL Account
+Feature: To Create a folder using Header Option Icon
+  Scenario: To Create a folder - Header Option
     Given I launch chrome browser
     When I open Url "https://www.syncoffice.com/module-test-dashboard/dashboard"
     Then I Click on login button
-    And I enter UserName "damawalemidc@gmail.com" And Password "Creta_123"
-    And I Click on Login
+    And    I enter UserName "damawalemidc@gmail.com" And Password "Creta_123"
     And I Click on Login
     And Click on Cloud
     Then Click on My Cloud
@@ -13,6 +12,9 @@ Feature: To Add GL Account - on Assignment of Sub GL Account
     And Move Files drawer opens up Select the Location
     And Click On Move button
     Then Verify
+
+
+
 
 
 

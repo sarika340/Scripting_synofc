@@ -17,9 +17,10 @@ public class Gl_account_Upload_file {
         driver = rdriver;
         PageFactory.initElements(rdriver, this);
     }
-
     @FindBy(xpath = "//*[text()=\"cloud_download\"]")
     WebElement cloud;
+    @FindBy(xpath = "//*[text()=\"account_balance_wallet\"]\n")
+    WebElement gl_act;
     @FindBy(xpath = "//*[text()=\"Download Sample\"]")
     WebElement download;
 
@@ -48,13 +49,14 @@ public class Gl_account_Upload_file {
     @FindBy(xpath="(//*[@type=\"text\"])[5]")
     WebElement search;
     public void setCloud() throws InterruptedException {
+        gl_act.click();
+        Thread.sleep(3000);
+        mouse.click();
         Thread.sleep(3000);
         cloud.click();
-        Thread.sleep(5000);
       //  download.click();
         Thread.sleep(8000);
 //file.click();
-        Thread.sleep(8000);
 
         file.sendKeys("/home/nisha/Downloads/new gl_acount.xls");
         Thread.sleep(8000);

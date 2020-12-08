@@ -70,6 +70,7 @@ public class Reco_status_page {
             // delete.click();
             Thread.sleep(8000);
             //  dlt_2.click();
+           // driver.close();
             System.out.println(" New User successfully Deleted in Reco_status");
         } else {
             System.out.println(" New User not added in Reco_status");

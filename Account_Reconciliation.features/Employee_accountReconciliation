@@ -5,7 +5,7 @@ Feature: To Add Legal Entity - From / Edit Add GL Account Page
     Then I Click on login button
     And I enter UserName "damawalemidc@gmail.com" And Password "Creta_123"
     And I Click on Login
-    And 	Click on Account Reconciliation
+    And 	Click on Account Reconciliation tab
     And  	Hover on Right Side panel Employee
     And 	Click on Employee
     And 	Click on Add Icon on Add Employee Drawer
