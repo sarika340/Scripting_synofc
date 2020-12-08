@@ -8,7 +8,7 @@ Feature: To Email the Selected files - Header Option Icon
     And Click on Cloud
     Then Click on My Cloud
     And Select files to send
-    And Click on Email Icon
+    And Click on Email  Icon
     When Email Files drawer opens up and Add To email
     Then Click on CC and BCC to add the other Email Recipients
     Then Enter Matter to send with file

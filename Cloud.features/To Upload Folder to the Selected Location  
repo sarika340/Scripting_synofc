@@ -6,7 +6,7 @@ Feature:
     And  I enter UserName "damawalemidc@gmail.com" And Password "Creta_123"
     And I Click on Login
     And Click on Cloud
-    Then Click on My Cloud
+    Then Click  on My Cloud
     And Click on Upload
     Then Click on Upload Folder
     Then Select the Folder

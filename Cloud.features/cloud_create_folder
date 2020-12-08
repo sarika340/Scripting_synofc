@@ -7,7 +7,7 @@ Feature: To Create a folder using Header Option Icon
     And I Click on Login
     And Click on Cloud
     Then Click on My Cloud
-    And Select files to Move
+    And Select  files to Move
     And Click on Move Icon
     And Move Files drawer opens up Select the Location
     And Click On Move button
