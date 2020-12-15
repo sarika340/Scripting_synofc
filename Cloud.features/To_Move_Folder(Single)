@@ -1,0 +1,18 @@
+Feature: To Move Folder (Single)
+  Scenario: To Move folder
+  Scenario:Upload Files to the Selected Location - Header Option Icon
+    Given I launch chrome browser
+    When I open Url "https://www.syncoffice.com/module-test-dashboard/dashboard"
+    Then I Click on login button
+    And    I enter UserName "damawalemidc@gmail.com" And Password "Creta_123"
+    And I Click on Login
+    And Click on Cloud
+    Then Click on My Cloud
+    Then Right Click on folder (Level 3 onwards)
+    And Click or Hover on Move
+    Then Select option Single Folder
+    Then select the folder to move
+    Then Select the location on the drawer named Move Folder
+    Then Click on Move
+    Then Verify
+

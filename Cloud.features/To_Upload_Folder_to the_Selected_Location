@@ -1,4 +1,4 @@
-Feature:
+Feature:Upload Folder/file to the Selected Location
   Scenario:Upload Folder to the Selected Location -
     Given I launch chrome browser
     When I open Url "https://www.syncoffice.com/module-test-dashboard/dashboard"
@@ -6,9 +6,15 @@ Feature:
     And  I enter UserName "damawalemidc@gmail.com" And Password "Creta_123"
     And I Click on Login
     And Click on Cloud
-    Then Click  on My Cloud
+    Then Click on My Cloud
     And Click on Upload
     Then Click on Upload Folder
     Then Select the Folder
     Then Click on Upload button
+    And Search Upload file which is currently added(Cloud)
+    Then Click On Delete button
+    Then Delete Pop up opens up Enter the Password
+    And Click on the DeleteButton
     Then Verify
+
+

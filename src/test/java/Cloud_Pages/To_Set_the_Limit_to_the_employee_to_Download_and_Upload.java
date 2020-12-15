@@ -1,6 +1,7 @@
 package Cloud_Pages;
 
 import Utilities.Utilities_class;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -48,6 +49,9 @@ public class To_Set_the_Limit_to_the_employee_to_Download_and_Upload {
     WebElement Type_MB;
     @FindBy(xpath = "(//*[@class=\"mdc-select__native-control customFieldText py-0\"])[5]//*[@value=\"mb\"]")
     WebElement type_mb;
+    //*[text()="Set Limit"]
+    @FindBy(xpath = "//*[text()=\"Set Limit\"]")
+    WebElement limit_displaye;
     public void setAdmistration() {
         admistration.click();
     }
@@ -91,6 +95,9 @@ public class To_Set_the_Limit_to_the_employee_to_Download_and_Upload {
 
     public void setLimit2() {
         limit2.click();
+        Assert.assertEquals("Set Limit\n" ,limit_displaye);
+
+
     }
 
     public void setUpload_limit() throws InterruptedException {

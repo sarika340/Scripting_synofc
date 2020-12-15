@@ -1,0 +1,13 @@
+Feature: To Create a folder using Header Option Icon
+  Scenario: To Create a folder - Header Option
+    Given I launch chrome browser
+    When I open Url "https://www.syncoffice.com/module-test-dashboard/dashboard"
+    Then I Click on login button
+    And    I enter UserName "damawalemidc@gmail.com" And Password "Creta_123"
+    And I Click on Login
+    And Click on Cloud
+    Then Click on Client Cloud
+    And Click on Create Folder Icon(Client Cloud)
+    When  Create folder pop up opens Name a new Folder
+    Then Click On Create Button
+    Then Verify

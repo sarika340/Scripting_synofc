@@ -1,0 +1,23 @@
+Feature: To Email the Selected files - Header Option Icon (With Adding and Removing files)
+  Scenario: To Email the Selected files - Header Option - With Adding and Removing files
+    Given I launch chrome browser
+    When I open Url "https://www.syncoffice.com/module-test-dashboard/dashboard"
+    Then I Click on login button
+    And    I enter UserName "damawalemidc@gmail.com" And Password "Creta_123"
+    And I Click on Login
+    And Click on Cloud
+    Then Click on Client Cloud
+    And Select files to send
+    And Click on Email Icon
+    When Email Files drawer opens up and Add To email
+    Then Click on CC and BCC to add the other Email Recipients
+    Then Enter Matter to send with file
+    Then Click on Zip to ZIp Or Unzip files
+    Then Click On Add button on drawer to add files
+    When Opens the Drawer named Select Files
+    Then Select the files to Add
+    Then Verify
+    Then Select the files to remove
+    Then Click On Remove button on drawer to remove files
+    Then Verify
+    And Click on Send

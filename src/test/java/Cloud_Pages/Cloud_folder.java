@@ -38,8 +38,9 @@ public class Cloud_folder {
         add.click();
     }
 
-    public void setText_box() {
+    public void setText_box() throws InterruptedException {
         text_box.sendKeys(Utilities_class.randomalphabet(6));
+        Thread.sleep(9000);
         create.click();
     }
 }

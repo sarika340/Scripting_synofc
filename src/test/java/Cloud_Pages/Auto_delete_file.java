@@ -26,6 +26,8 @@ public class Auto_delete_file {
     WebElement text ;
     @FindBy(xpath = "(//*[text()=\"Financer\"])[1]")
     WebElement ms;
+    @FindBy(xpath = "//*[text()=\"save\"]")
+    WebElement dlt;
 
     @FindBy(xpath = "    //*[text()=\"OverAll\"]\n")
     WebElement overall;
@@ -44,23 +46,27 @@ public class Auto_delete_file {
     WebElement save;
     @FindBy(xpath = "//*[@type=\"password\"]")
     WebElement passwod;
+
     public void setMs( ) throws InterruptedException {
+        Thread.sleep(7000);
+
         ms.click();
-serch.sendKeys("123");
-Thread.sleep(3000);
+        Thread.sleep(7000);
+       // serch.sendKeys("Mat");
+        Thread.sleep(7000);
         text.click();
-        Thread.sleep(3000);
+        Thread.sleep(7000);
         delete.click();
         Thread.sleep(3000);
 
         passwod.sendKeys("Creta_123");
-        Thread.sleep(3000);
+        Thread.sleep(4000);
 
         save.click();
-        Thread.sleep(3000);
+        Thread.sleep(8000);
 
         restore.click();
-        Thread.sleep(3000);
+        Thread.sleep(6000);
 
         overall.click();
         Thread.sleep(3000);
@@ -77,8 +83,7 @@ Thread.sleep(3000);
         Thread.sleep(4000);
 
         maas.click();
-
-
+        Thread.sleep(4000);
 
         password.sendKeys("Creta_123");
         Thread.sleep(4000);

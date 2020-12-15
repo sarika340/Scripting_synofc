@@ -7,7 +7,7 @@ Then I Click on login button
 And I Click on Login
 And Click on Cloud
 Then Click on My Cloud
-And Click on  Create Folder Icon
+And Click on Create Folder Icon
 When  Create folder pop up opens Name a new Folder
 Then Click On Create Button
 Then Verify

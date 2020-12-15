@@ -28,7 +28,7 @@ public class Cloud  {
         Thread.sleep(3000);
     }
     @When("Create folder pop up opens Name a new Folder")
-    public void create_folder_pop_up_opens_Name_a_new_Folder() {
+    public void create_folder_pop_up_opens_Name_a_new_Folder() throws InterruptedException {
         Cloud.setText_box();
     }
 

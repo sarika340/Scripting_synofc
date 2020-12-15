@@ -8,6 +8,7 @@ import com.google.common.io.Files;
 import org.apache.commons.lang.RandomStringUtils;
 import org.joda.time.LocalDate;
 import org.joda.time.format.DateTimeFormatter;
+import org.junit.Assert;
 import org.openqa.selenium.*;
 
 import java.text.DateFormat;
@@ -19,8 +20,18 @@ import java.util.Random;
 
 
 public class Utilities_class {
-
+protected static String profile;
     public WebDriver driver;
+
+public void setupSuite()
+{
+    profile=System.getenv("ENV");
+    if(profile==null)
+    {
+        Assert.fail("Env varible not set");
+    }
+
+}
 
     public static String randomalphabet(int count) {
 

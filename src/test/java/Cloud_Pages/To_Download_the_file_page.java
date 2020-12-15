@@ -14,7 +14,7 @@ public class To_Download_the_file_page {
         PageFactory.initElements(rdriver, this);
     }
 
-    @FindBy(xpath = "(//*[@role=\"presentation\"])[9]")
+    @FindBy(xpath = "//*[@id=\"UHJvamVjdCBJR0k=/SGVhZCBPZmZpY2U=/VGF4_anchor\"]")
     WebElement admistration;
     @FindBy(xpath = "//*[@type=\"text\"]")
     WebElement serach;
@@ -39,7 +39,7 @@ public class To_Download_the_file_page {
 
 
     public void setSerach() throws InterruptedException{
-        serach.sendKeys("123");
+        serach.sendKeys("GL.xls");
         Thread.sleep(5000);
 
     }
