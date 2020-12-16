@@ -147,7 +147,7 @@ public class To_preview {
         Thread.sleep(6000);
 
         replace_file.click();
-        Thread.sleep(6000);
+        Thread.sleep(8000);
 
         upload_file.sendKeys("/home/nisha/Desktop/Result_Account_Reconcilation/Add_Employee.png");
         Thread.sleep(6000);

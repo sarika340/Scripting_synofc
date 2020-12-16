@@ -27,6 +27,7 @@ import java.util.logging.Logger;
  public class stepdefinitions extends Utilities_class {
      String doc1 = Utilities_class.randomalphabet(4);
      public Upload_file up_file;
+     public To_Email_Selected_file email_file;
      public To_preview preview;
      public To_move_folder_single single_folder;
      public Guest_user_page Guest;
@@ -81,6 +82,7 @@ import java.util.logging.Logger;
          System.setProperty("Webdriver.chromeDriver", ".//chromedriver");
          driver = new ChromeDriver();
          Reco = new Reco_status_page(driver);
+         email_file=new To_Email_Selected_file(driver);
          dwn_file = new To_Download_the_file_page(driver);
          copy_file = new Cloud_copy_file(driver);
          ad_search = new Advance_Search(driver);
@@ -596,6 +598,8 @@ import java.util.logging.Logger;
 
      @When("Create folder pop up opens Name a new Folder")
      public void create_folder_pop_up_opens_Name_a_new_Folder() throws InterruptedException {
+         Thread.sleep(3000);
+
          Cloud.setText_box();
      }
 
@@ -1710,47 +1714,56 @@ import java.util.logging.Logger;
 
 
      @Then("Select files to send")
-     public void select_files_to_send() {
-
+     public void select_files_to_send() throws InterruptedException {
+         email_file.setFunctional();
+System.out.println("Select files to send");
      }
 
      @Then("Click on Email Icon")
      public void click_on_Email_Icon() {
+         System.out.println("Click on Email Icon");
 
      }
 
      @When("Email Files drawer opens up and Add To email")
      public void email_Files_drawer_opens_up_and_Add_To_email() {
+         System.out.println("Click on Email Icon");
 
      }
 
      @Then("Click on CC and BCC to add the other Email Recipients")
      public void click_on_CC_and_BCC_to_add_the_other_Email_Recipients() {
+         System.out.println("Click on Email Icon");
 
      }
 
      @Then("Enter Matter to send with file")
      public void enter_Matter_to_send_with_file() {
+         System.out.println("Click on Email Icon");
 
      }
 
      @Then("Click on Zip to ZIp Or Unzip files")
      public void click_on_Zip_to_ZIp_Or_Unzip_files() {
+         System.out.println("Click on Email Icon");
 
      }
 
      @Then("Click On Add button on drawer to add files")
      public void click_On_Add_button_on_drawer_to_add_files() {
+         System.out.println("Click on Email Icon");
 
      }
 
      @Then("Click On Remove button on drawer to Remove files")
      public void click_On_Remove_button_on_drawer_to_Remove_files() {
+         System.out.println("Click on Email Icon");
 
      }
 
      @Then("Click on Send")
      public void click_on_Send() {
+         System.out.println("Click on Email Icon");
 
      }
 
@@ -1831,12 +1844,15 @@ import java.util.logging.Logger;
      @Then("Select the Date Range")
      public void selectTheDateRange() throws InterruptedException {
          ad_search.setFile_name();
+         Thread.sleep(6000);
+
          //ad_search.setSep();
      }
 
      @And("Seact the File Type for Advance Search")
      public void seactTheFileTypeForAdvanceSearch() throws InterruptedException {
          ad_search.setDate();
+         Thread.sleep(6000);
      }
 
      @Then("Select the File Size")
@@ -2172,14 +2188,13 @@ import java.util.logging.Logger;
 
      @Then("Click on Client Cloud")
      public void clickOnClientCloud() throws InterruptedException {
-Thread.sleep(8000);
+         Thread.sleep(8000);
          driver.findElement(By.xpath("//*[text()=\"Client Cloud\"]")).click();
      }
 
      @And("Click on Create Folder Icon\\(Client Cloud)")
      public void clickOnCreateFolderIconClientCloud() throws InterruptedException{
          Thread.sleep(9000);
-//driver.findElement(By.xpath("//*[text()=\"add\"]")).click();
          Cloud.setAdd();
          Thread.sleep(8000);
 

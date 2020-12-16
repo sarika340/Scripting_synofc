@@ -1,0 +1,17 @@
+Feature: To Set the Limit to the employee to Download and Upload
+  Scenario: To Set the Limit to the employee to Download and Upload
+    Given I launch chrome browser
+    When I open Url "https://www.syncoffice.com/module-test-dashboard/dashboard"
+    Then I Click on login button
+    And  I enter UserName "damawalemidc@gmail.com" And Password "Creta_123"
+    And I Click on Login
+    And Click on Cloud
+    Then Click on Client Cloud
+    And Click on Limit Icon
+    When Select the data Range to upload and Download in Upload Limit and Download Limit
+    Then Select the Data Unit
+    And Seact the File Type
+    Then Select the Select the employees to Apply the Data count
+    Then Click on Limit Button to Use common Selection for Multiple and Select Employee
+    Then Click on Save button
+    Then Verify Limit option

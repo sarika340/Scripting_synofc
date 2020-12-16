@@ -1,0 +1,26 @@
+Feature: To Create a New Folder and
+  Scenario: To Create a new folder
+    Given I launch chrome browser
+    When I open Url "https://www.syncoffice.com/module-test-dashboard/dashboard"
+    Then I Click on login button
+    And  I enter UserName "damawalemidc@gmail.com" And Password "Creta_123"
+    And  I Click on Login
+    And Click on Cloud
+    Then Click on Client Cloud
+    Then Right Click on folder (Level 3)
+    And Click on New Folder
+    Then on New folder Pop up Enter Name of New Folder
+    Then Click on Create Folder
+    Then Right Click on folder
+    Then Click on Rename option
+    Then Rename folder popup should display
+    Then Enter the new name
+    Then Click on Rename button
+    Then Right Click on folder and click on Download button
+    Then Again Right Click on folder
+    Then Click on Delete option
+    Then Delete Pop up should display
+    Then Enter the password
+    Then Click On Delete
+    Then Verify
+

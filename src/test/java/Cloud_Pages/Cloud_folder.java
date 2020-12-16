@@ -20,7 +20,7 @@ public class Cloud_folder {
     WebElement mycloud ;
     @FindBy(xpath = "(//*[text()=\"add\"])[1]")
     WebElement add ;
-    @FindBy(xpath = "(//*[@type=\"text\"])[2]")
+    @FindBy(xpath = "//*[text()=\"Folder Name\"]")
     WebElement text_box ;
     @FindBy(xpath = "//*[text()=\"Create\"]")
     WebElement create ;
@@ -39,6 +39,7 @@ public class Cloud_folder {
     }
 
     public void setText_box() throws InterruptedException {
+        Thread.sleep(9000);
         text_box.sendKeys(Utilities_class.randomalphabet(6));
         Thread.sleep(9000);
         create.click();
