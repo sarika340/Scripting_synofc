@@ -22,7 +22,6 @@ import org.openqa.selenium.interactions.Actions;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
-import java.util.logging.Logger;
 
  public class stepdefinitions extends Utilities_class {
      String doc1 = Utilities_class.randomalphabet(4);

@@ -1,0 +1,14 @@
+Feature: To see Requests made by Logged employee
+  Scenario:To see Requests made by Logged employee - Header Option
+    Given I launch chrome browser
+    When I open Url "https://www.syncoffice.com/module-test-dashboard/dashboard"
+    Then I Click on login button
+    And  I enter UserName "damawalemidc@gmail.com" And Password "Creta_123"
+    And  I Click on Login
+    And Click on Cloud
+    Then Click on Client Cloud
+    And Click on Delete Request Icon and Select Request Log
+    Then Click on Delete Request and Select the files to Remove Requests from the list
+    Then Click on Remove
+    Then Verify
+

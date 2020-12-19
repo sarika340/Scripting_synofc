@@ -1,0 +1,17 @@
+Feature: To Zip & Mail Any Folder from the Tree Structure
+  Scenario:To Zip & Mail Any Folder from the Tree Structure
+    Given I launch chrome browser
+    When I open Url "https://www.syncoffice.com/module-test-dashboard/dashboard"
+    Then I Click on login button
+    And  I enter UserName "damawalemidc@gmail.com" And Password "Creta_123"
+    And  I Click on Login
+    And Click on Cloud
+    Then Click on Client Cloud
+    Then Right Click on folder to see the Details
+    Then Right Click on folder to Zip & Mail
+    And Click on Zip & Mail option from the list
+    Then Enter to Email On Zip and Email Pop up
+    Then Enter to email, CC and Bcc
+    Then Enter Subject to Send to the Recipient
+    And Click on Send (mail)
+    Then Verify

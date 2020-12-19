@@ -26,8 +26,8 @@ Guest_user {
         driver.manage().window().maximize();
         driver.findElement(By.xpath("(//*[@class=\"MuiButton-label\"])[1]")).click();
         System.out.println("Login");
-        driver.findElement(By.xpath("//*[@type='text']\n")).sendKeys("sarika.mishra@candytechnologies.in");
-        driver.findElement(By.xpath("      //*[@type='password']\n")).sendKeys("123456");
+       // driver.findElement(By.xpath("//*[@type='text']\n")).sendKeys("sarika.mishra@candytechnologies.in");
+     //   driver.findElement(By.xpath("      //*[@type='password']\n")).sendKeys("123456");
         Thread.sleep(2000);
 
         driver.findElement(By.xpath("//*[text()=\"login\"]")).click();
@@ -60,7 +60,7 @@ Guest_user {
         System.out.println("date");
         WebElement element= driver.findElement(By.xpath("(//*[@focusable=\"false\"])[11] "));
        JavascriptExecutor executor = (JavascriptExecutor) driver;
-      executor.executeScript("arguments[0].click();", element);
+     // executor.executeScript("arguments[0].click();", element);
         Thread.sleep(2000);
         driver.findElement(By.xpath("(//*[@focusable=\"false\"])[11]")).click();
 

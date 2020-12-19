@@ -7,6 +7,7 @@
       <root url="jar://$MAVEN_REPOSITORY$/ch/qos/logback/logback-classic/1.0.13/logback-classic-1.0.13-javadoc.jar!/" />
       <root url="jar://$PROJECT_DIR$/../Downloads/log4j-1.2.17-javadoc.jar!/" />
       <root url="file://$PROJECT_DIR$/../Desktop/apache-log4j-1.2.17/site/apidocs" />
+      <root url="jar://$PROJECT_DIR$/../Downloads/log4j-1.2.17.zip!/apache-log4j-1.2.17/site/apidocs" />
     </JAVADOC>
     <NATIVE>
       <root url="file://$PROJECT_DIR$/../Desktop/apache-log4j-1.2.17" />
@@ -22,6 +23,16 @@
       <root url="file://$PROJECT_DIR$/../Desktop/apache-log4j-1.2.17/src/main/javadoc" />
       <root url="file://$PROJECT_DIR$/../Desktop/apache-log4j-1.2.17/src/performance/java" />
       <root url="file://$PROJECT_DIR$/../Desktop/apache-log4j-1.2.17/tests/src/java" />
+      <root url="jar://$PROJECT_DIR$/../Downloads/log4j-1.2.17.zip!/apache-log4j-1.2.17" />
+      <root url="jar://$PROJECT_DIR$/../Downloads/log4j-1.2.17.zip!/apache-log4j-1.2.17/contribs/CekiGulcu" />
+      <root url="jar://$PROJECT_DIR$/../Downloads/log4j-1.2.17.zip!/apache-log4j-1.2.17/contribs/Jamie Tsao" />
+      <root url="jar://$PROJECT_DIR$/../Downloads/log4j-1.2.17.zip!/apache-log4j-1.2.17/contribs/JimMoore" />
+      <root url="jar://$PROJECT_DIR$/../Downloads/log4j-1.2.17.zip!/apache-log4j-1.2.17/contribs/ThomasFenner" />
+      <root url="jar://$PROJECT_DIR$/../Downloads/log4j-1.2.17.zip!/apache-log4j-1.2.17/src/main/java" />
+      <root url="jar://$PROJECT_DIR$/../Downloads/log4j-1.2.17.zip!/apache-log4j-1.2.17/src/main/javadoc" />
+      <root url="jar://$PROJECT_DIR$/../Downloads/log4j-1.2.17.zip!/apache-log4j-1.2.17/src/performance/java" />
+      <root url="jar://$PROJECT_DIR$/../Downloads/log4j-1.2.17.zip!/apache-log4j-1.2.17/tests/src/java" />
+      <root url="jar://$PROJECT_DIR$/../Desktop/sqlite-jdbc-3.8.11.1.jar!/" />
     </SOURCES>
   </library>
 </component>

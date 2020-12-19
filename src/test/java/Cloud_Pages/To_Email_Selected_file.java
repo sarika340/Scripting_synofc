@@ -50,6 +50,7 @@ public class To_Email_Selected_file {
         Thread.sleep(9000);
 
         check_box.click();
+        System.out.println("aaaaa");
         Thread.sleep(9000);
 
         To_email.sendKeys(random_name+"gmail.com");

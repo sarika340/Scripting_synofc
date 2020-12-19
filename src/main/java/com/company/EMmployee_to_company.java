@@ -1,16 +1,36 @@
 package com.company;
 
+import com.aventstack.extentreports.ExtentTest;
+import com.cucumber.listener.Reporter;
+import cucumber.api.Scenario;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
+import java.io.File;
 import java.util.concurrent.TimeUnit;
 
 public class EMmployee_to_company {
+       private static ExtentTest test;
+        private static boolean flag;
+        public static Scenario scenario;
+        private static String scenarioName;
+
+
+
+        private static  Logger LOGGER= LogManager.getLogger(EMmployee_to_company.class);
+
+        static Logger log = Logger.getLogger(EMmployee_to_company.class.getName());
+
     public static void main(String[] args) throws InterruptedException {
         System.out.println("hello sarika");
+
 
         System.setProperty("Webdriver.chromeDriver", ".//chromedriver");
 
@@ -19,11 +39,20 @@ public class EMmployee_to_company {
         driver.get("https://www.syncoffice.com/module-test-dashboard/dashboard");
         System.out.println("launch google page");
         Thread.sleep(2000);
+           // log.info("my name is khan");
+          //  log.info("sarika mishra");
+          //  LOGGER.info("I am insideSetup");
+         //   scenario.write("I am inside tear down");
         driver.manage().window().maximize();
         driver.findElement(By.xpath("(//*[@class=\"MuiButton-label\"])[1]")).click();
         System.out.println("Login");
         driver.findElement(By.xpath("//*[@type='text']\n")).sendKeys("sarika.mishra@candytechnologies.in");
         driver.findElement(By.xpath("      //*[@type='password']\n")).sendKeys("123456");
+
+
+
+
+
 
         driver.findElement(By.xpath("//*[text()=\"login\"]")).click();
         System.out.println("click on Login");

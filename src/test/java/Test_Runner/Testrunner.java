@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
 
 
 
-        features ="/home/nisha/master_syncoffice/Master_Roles_and_permission/Employee_permission.feature",glue = "Step_defination"
+        features ="/home/nisha/master_syncoffice/Account_Reconciliation.features/Add_category",glue = "Step_defination"
       // , monochrome = true /*  display the console output in a proper readable format */
        , dryRun = false
         //to check the mapping is between feature file and step definition
