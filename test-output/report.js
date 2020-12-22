@@ -1,142 +1,231 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:/home/nisha/master_syncoffice/Features/Add_Guest_user");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("/Users/NaveenKhunteta/Documents/workspace/FreeCrmBDDFramework/src/main/java/Features/taggedhooks.feature");
 formatter.feature({
-  "name": "Add Guest user",
+  "line": 1,
+  "name": "Test Tagged Hooks",
   "description": "",
+  "id": "test-tagged-hooks",
   "keyword": "Feature"
 });
+formatter.before({
+  "duration": 259317,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 133065,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 135775,
+  "status": "passed"
+});
 formatter.scenario({
-  "name": "Add Guest user",
+  "line": 4,
+  "name": "This is First test",
   "description": "",
-  "keyword": "Scenario"
+  "id": "test-tagged-hooks;this-is-first-test",
+  "type": "scenario",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "line": 3,
+      "name": "@First"
+    }
+  ]
 });
 formatter.step({
-  "name": "I launch chrome browser",
+  "line": 5,
+  "name": "this is the first step",
   "keyword": "Given "
 });
-formatter.match({
-  "location": "Master_stepdefinition.i_launch_chrome_browser()"
-});
-formatter.result({
-  "status": "skipped"
-});
 formatter.step({
-  "name": "I open Url \"https://www.syncoffice.com/module-test-dashboard/dashboard\"",
+  "line": 6,
+  "name": "this is the second step",
   "keyword": "When "
 });
-formatter.match({
-  "location": "Master_stepdefinition.i_open_Url(String)"
-});
-formatter.result({
-  "status": "skipped"
-});
 formatter.step({
-  "name": "I Click on login button",
+  "line": 7,
+  "name": "this is the third step",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "Master_stepdefinition.i_Click_on_login_button()"
+  "location": "TaggedHooksStepDefinition.this_is_the_first_step()"
 });
 formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "I enter UserName \"sarika.mishra@candytechnologies.in\" And Password \"123456\"",
-  "keyword": "And "
+  "duration": 85898436,
+  "status": "passed"
 });
 formatter.match({
-  "location": "Master_stepdefinition.i_enter_UserName_And_Password(String,String)"
+  "location": "TaggedHooksStepDefinition.this_is_the_second_step()"
 });
 formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "I Click on Login",
-  "keyword": "And "
+  "duration": 98039,
+  "status": "passed"
 });
 formatter.match({
-  "location": "Master_stepdefinition.i_Click_on_Login()"
+  "location": "TaggedHooksStepDefinition.this_is_the_third_step()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 84479,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 54473,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 44919,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 81175,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 112120,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 82098,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 76810,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 10,
+  "name": "This is Second test",
+  "description": "",
+  "id": "test-tagged-hooks;this-is-second-test",
+  "type": "scenario",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "line": 9,
+      "name": "@Second"
+    }
+  ]
 });
 formatter.step({
-  "name": "Click on masters",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "Master_stepdefinition.click_on_masters()"
-});
-formatter.result({
-  "status": "skipped"
+  "line": 11,
+  "name": "this is the first step",
+  "keyword": "Given "
 });
 formatter.step({
-  "name": "click on client should open list",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "Master_stepdefinition.click_on_client_should_open_list()"
-});
-formatter.result({
-  "status": "skipped"
+  "line": 12,
+  "name": "this is the second step",
+  "keyword": "When "
 });
 formatter.step({
-  "name": "click on Guest_user Module",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "Master_stepdefinition.click_on_Guest_user_Module()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "click on Guest_user sub module",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "Master_stepdefinition.click_on_Guest_user_sub_module()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "Guest user page should display",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "Master_stepdefinition.guest_user_page_should_display()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "click on add button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "Master_stepdefinition.click_on_add_button()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "Enter All mendetry fields",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "Master_stepdefinition.enter_All_mendetry_fields()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "click on save Button and should display successful pop up",
+  "line": 13,
+  "name": "this is the third step",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "Master_stepdefinition.click_on_save_Button_and_should_display_successful_pop_up()"
+  "location": "TaggedHooksStepDefinition.this_is_the_first_step()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 127029,
+  "status": "passed"
+});
+formatter.match({
+  "location": "TaggedHooksStepDefinition.this_is_the_second_step()"
+});
+formatter.result({
+  "duration": 88211,
+  "status": "passed"
+});
+formatter.match({
+  "location": "TaggedHooksStepDefinition.this_is_the_third_step()"
+});
+formatter.result({
+  "duration": 88937,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 92284,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 140453,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 66290,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 120620,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 76143,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 67536,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 16,
+  "name": "This is Third test",
+  "description": "",
+  "id": "test-tagged-hooks;this-is-third-test",
+  "type": "scenario",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "line": 15,
+      "name": "@Third"
+    }
+  ]
+});
+formatter.step({
+  "line": 17,
+  "name": "this is the first step",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 18,
+  "name": "this is the second step",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 19,
+  "name": "this is the third step",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "TaggedHooksStepDefinition.this_is_the_first_step()"
+});
+formatter.result({
+  "duration": 69572,
+  "status": "passed"
+});
+formatter.match({
+  "location": "TaggedHooksStepDefinition.this_is_the_second_step()"
+});
+formatter.result({
+  "duration": 72834,
+  "status": "passed"
+});
+formatter.match({
+  "location": "TaggedHooksStepDefinition.this_is_the_third_step()"
+});
+formatter.result({
+  "duration": 71562,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 74866,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 67355,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 66706,
+  "status": "passed"
 });
 });

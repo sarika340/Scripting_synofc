@@ -5,11 +5,14 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 
 import com.google.common.io.Files;
+import cucumber.api.java.After;
+import cucumber.api.java.Before;
 import org.apache.commons.lang.RandomStringUtils;
 import org.joda.time.LocalDate;
 import org.joda.time.format.DateTimeFormatter;
 import org.junit.Assert;
 import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -22,7 +25,6 @@ import java.util.Random;
 public class Utilities_class {
 protected static String profile;
     public WebDriver driver;
-
 
 
 
